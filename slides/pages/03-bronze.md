@@ -1,13 +1,14 @@
 ---
 layout: default
+class: diagram-slide
 ---
 
 # Landing → Bronze
 
-![Landing to bronze](../public/diagrams/landing_to_bronze.svg)
+![Landing to bronze](./diagrams/landing_to_bronze.svg)
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
 ---
 
 # Payload routing
@@ -20,7 +21,7 @@ flowchart LR
 ```
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
 ---
 
 ## Ingestion gateway
@@ -37,7 +38,7 @@ class: compact-slide
 
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
 ---
 
 # Demultiplexing
@@ -50,7 +51,7 @@ Multiplexed files **must not** enter WORM bronze intact.
 4. Original multiplex → `bronze_archive`
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
 ---
 
 # Pre-validation (landing)

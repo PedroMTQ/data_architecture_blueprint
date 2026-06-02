@@ -5,14 +5,7 @@
   --lih-slate: #475569;
   --lih-bg: #f8fafc;
   --lih-border: #e2e8f0;
-}
-
-.slidev-layout {
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-
-.slidev-layout h1 {
-  color: var(--lih-navy);
+  --slidev-theme-primary: var(--lih-navy);
 }
 
 .slidev-layout h2 {
@@ -38,7 +31,25 @@
   margin: 0.2em 0;
 }
 
-/* Dense markdown tables (RBAC matrices, etc.) — use: class: compact-slide table-dense */
+/* Reference slides — skip in 20 min talk: class: compact-slide optional-slide */
+.slidev-layout.optional-slide::after {
+  content: "ℹ";
+  position: absolute;
+  top: 0.65rem;
+  right: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--lih-slate);
+  background: var(--lih-bg);
+  border: 1px solid var(--lih-teal);
+  padding: 0.35em 0.6em;
+  border-radius: 6px;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Dense markdown tables (RBAC matrices): class: compact-slide table-dense */
 .slidev-layout.table-dense h1 {
   font-size: 1.35em;
   margin-bottom: 0.35em;
@@ -70,27 +81,15 @@
   vertical-align: top;
 }
 
-.slidev-layout img.diagram,
-.slidev-layout .diagram {
-  max-height: 62vh;
-  width: auto;
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-
-.slidev-layout img.diagram-sm {
-  max-height: 48vh;
-}
-
-/* Title + large SVG (gold pipeline, full pipeline, etc.) */
+/* Large SVG slides: class: diagram-slide (no {.diagram} on markdown images) */
 .slidev-layout.diagram-slide h1 {
   font-size: 1.45em;
   margin-bottom: 0.35em;
   line-height: 1.2;
 }
 
-.slidev-layout.diagram-slide img.diagram {
+.slidev-layout.diagram-slide img {
+  color-scheme: light;
   max-height: calc(100vh - 7rem);
   max-width: 100%;
   width: auto;
@@ -98,16 +97,4 @@
   margin: 0 auto;
   display: block;
   object-fit: contain;
-}
-
-.agenda-grid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.35em 1.2em;
-  font-size: 0.9em;
-}
-
-.agenda-num {
-  color: var(--lih-teal);
-  font-weight: 700;
 }

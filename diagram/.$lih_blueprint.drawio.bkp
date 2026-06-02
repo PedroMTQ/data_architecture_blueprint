@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram name="Page-1" id="Px--xSk2ii70o_0RA-ic">
-    <mxGraphModel dx="2712" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4001" dy="1820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -31,13 +31,13 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-104" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-102" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Ingestion router" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#cce5ff;strokeColor=#36393d;" value="Ingestion router" vertex="1">
           <mxGeometry height="50" width="110" x="-154" y="960" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-116" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-114" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="bronze audit ledger" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#647687;" value="bronze audit ledger" vertex="1">
           <mxGeometry height="40" width="110" x="700" y="965" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-76" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-75" value="">
@@ -93,7 +93,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-68" edge="1" parent="GcrMJvRnOmsaSewIOBSj-70" source="GcrMJvRnOmsaSewIOBSj-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-61" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-65" parent="GcrMJvRnOmsaSewIOBSj-70" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="landing audit ledger" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-65" parent="GcrMJvRnOmsaSewIOBSj-70" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#647687;" value="landing audit ledger" vertex="1">
           <mxGeometry height="40" width="110" y="122.5" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="validation can re-occur on a schedule, file can be manually released (admin)" vertex="1">
@@ -105,7 +105,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-82" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-53" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="S3 landing zone" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#cdeb8b;strokeColor=#36393d;" value="S3 landing zone" vertex="1">
           <mxGeometry height="40" width="110" x="180" y="965" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="scans for malware, checks for corruption, etc" vertex="1">
@@ -141,7 +141,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-94" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Deduplication via sha256 checksum" vertex="1">
           <mxGeometry height="135" width="130" x="-335" y="917.5" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-102" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="landing audit ledger" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-102" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#647687;" value="landing audit ledger" vertex="1">
           <mxGeometry height="50" width="110" x="-154" y="1100" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-106" connectable="0" parent="1" style="group" value="" vertex="1">
@@ -150,7 +150,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-42" edge="1" parent="GcrMJvRnOmsaSewIOBSj-106" source="GcrMJvRnOmsaSewIOBSj-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-41">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-6" parent="GcrMJvRnOmsaSewIOBSj-106" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Ingestion gateway" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-6" parent="GcrMJvRnOmsaSewIOBSj-106" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#cce5ff;strokeColor=#36393d;" value="Ingestion gateway" vertex="1">
           <mxGeometry height="50" width="110" x="140" y="45" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-51" connectable="0" parent="GcrMJvRnOmsaSewIOBSj-106" style="group" value="" vertex="1">
@@ -215,7 +215,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-175" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-137">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-133" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Processing fork" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-133" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#cce5ff;strokeColor=#36393d;" value="Processing router" vertex="1">
           <mxGeometry height="40" width="110" x="1385" y="965" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-134" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-133">
@@ -361,7 +361,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-202" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=22;strokeWidth=2;" value="Serving API" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-202" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=22;strokeWidth=2;fillColor=#cce5ff;strokeColor=#36393d;" value="Serving API" vertex="1">
           <mxGeometry height="40" width="110" x="3025" y="1225" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-266" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-204" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-205">
@@ -378,7 +378,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-205" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Staging OMOP CDM" vertex="1">
           <mxGeometry height="40" width="110" x="3120" y="862.5" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-208" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFFFFF,#FFD700);strokeColor=#d79b00;" value="&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;S3 gold zone&lt;/span&gt;" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-208" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFD700,#FFD700);strokeColor=#d79b00;" value="&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;S3 gold zone&lt;/span&gt;" vertex="1">
           <mxGeometry height="55" width="105" x="3280" y="1217.5" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-209" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#E51400,#FF3333);" value="File is rejected" vertex="1">
@@ -393,7 +393,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-216" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="gold metadata logged" vertex="1">
           <mxGeometry height="40" width="110" x="3515" y="1458.5" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-217" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="gold audit ledger" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-217" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#647687;" value="gold audit ledger" vertex="1">
           <mxGeometry height="40" width="110" x="3275" y="1458.5" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-325" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-218" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-220" value="">
@@ -410,7 +410,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-219" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="GreatExpectations" vertex="1">
           <mxGeometry height="40" width="110" x="3595" y="1560" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-220" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="MCP server" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-220" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#cce5ff;strokeColor=#36393d;" value="MCP server" vertex="1">
           <mxGeometry height="40" width="110" x="3830" y="1458.5" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-319" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-224" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-203">
@@ -446,7 +446,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-313" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-277" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-297">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-277" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFFFFF,#FFD700);strokeColor=#d79b00;" value="&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;OMOP CDM&lt;/span&gt;" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-277" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFD700,#FFD700);strokeColor=#d79b00;" value="&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;OMOP CDM&lt;/span&gt;" vertex="1">
           <mxGeometry height="55" width="105" x="3690" y="855" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-284" parent="1" style="text;whiteSpace=wrap;html=1;" value="Consumers don&#39;t have access to the silver layer directly, instead we receive requests to the Serving API and aggregate/copy the data to the respective gold zone" vertex="1">
@@ -465,7 +465,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-298" connectable="0" parent="1" style="group" value="" vertex="1">
           <mxGeometry height="130" width="135" x="3675" y="990" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-297" parent="GcrMJvRnOmsaSewIOBSj-298" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFFFFF,#FFD700);strokeColor=#d79b00;align=right;" value="&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;OMOP serving layer&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-297" parent="GcrMJvRnOmsaSewIOBSj-298" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFD700,#FFD700);strokeColor=#d79b00;align=right;" value="&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;OMOP serving layer&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="130" width="135" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-293" connectable="0" parent="GcrMJvRnOmsaSewIOBSj-298" style="group" value="" vertex="1">
@@ -515,7 +515,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-203" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Submission API" vertex="1">
+        <mxCell id="52H_VTzxjPu0nNAqTo3r-2" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-203" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="52H_VTzxjPu0nNAqTo3r-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-203" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#cce5ff;strokeColor=#36393d;" value="Submission API" vertex="1">
           <mxGeometry height="40" width="110" x="3515" y="1225" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-346" connectable="0" parent="1" style="group" value="" vertex="1">
@@ -530,7 +533,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-193" parent="GcrMJvRnOmsaSewIOBSj-346" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;per-tenant silver bucket&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;All files are tagged with a patient ID&lt;/div&gt;" vertex="1">
           <mxGeometry height="63.75" width="210" x="10" y="258" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-198" parent="GcrMJvRnOmsaSewIOBSj-346" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Identity bridge" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-198" parent="GcrMJvRnOmsaSewIOBSj-346" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#76608A;" value="Identity bridge" vertex="1">
           <mxGeometry height="40" width="110" x="10" y="66.75" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-200" parent="GcrMJvRnOmsaSewIOBSj-346" style="text;whiteSpace=wrap;html=1;" value="we map the uri to the patient ID (for row-level entity linking)" vertex="1">
@@ -620,7 +623,7 @@
         <mxCell id="AcIvGXYM8tiFghnXml1P-21" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Data assets identification for cohort analytics, crypto-shredding etc" vertex="1">
           <mxGeometry height="70" width="167.5" x="161.25" y="330" as="geometry" />
         </mxCell>
-        <mxCell id="AcIvGXYM8tiFghnXml1P-23" parent="AcIvGXYM8tiFghnXml1P-24" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(255, 255, 255); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;We don&#39;t explicitly need imperative data lineage, assuming we log all processing, we can infer it through declarative systems&lt;/span&gt;" vertex="1">
+        <mxCell id="AcIvGXYM8tiFghnXml1P-23" parent="AcIvGXYM8tiFghnXml1P-24" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;We don&#39;t explicitly need imperative data lineage, assuming we log all processing, we can infer it through declarative systems&lt;/font&gt;&lt;/span&gt;" vertex="1">
           <mxGeometry height="50" width="230" x="136" y="410" as="geometry" />
         </mxCell>
         <mxCell id="AcIvGXYM8tiFghnXml1P-25" connectable="0" parent="1" style="group" value="" vertex="1">
@@ -735,7 +738,7 @@
         <mxCell id="GcrMJvRnOmsaSewIOBSj-235" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-233" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-231" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GcrMJvRnOmsaSewIOBSj-233" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;" value="EHRBase" vertex="1">
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-233" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;fillColor=#C0C0C0;" value="EHRBase" vertex="1">
           <mxGeometry height="40" width="110" x="2410" y="480" as="geometry" />
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-268" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Creates OpenEHR AQL query to flatten data for OMOP CDM" vertex="1">
@@ -743,6 +746,9 @@
         </mxCell>
         <mxCell id="GcrMJvRnOmsaSewIOBSj-243" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;" value="Validated OpenEHR to OMOP vocabulary" vertex="1">
           <mxGeometry height="40" width="130" x="2810" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="52H_VTzxjPu0nNAqTo3r-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#76608A;" value="Identity bridge" vertex="1">
+          <mxGeometry height="40" width="110" x="3625" y="1342.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

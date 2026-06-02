@@ -4,9 +4,7 @@ layout: cover
 
 # Data Architecture Blueprint
 
-Healthcare research data platform
-
-Bronze · Silver · Gold
+Healthcare research data platform blueprint
 
 ---
 layout: default
@@ -14,18 +12,20 @@ layout: default
 
 # Agenda
 
-<div class="agenda-grid">
-<span class="agenda-num">A</span><span>Introduction & design principles</span>
-<span class="agenda-num">B</span><span>S3 organization & data contract</span>
-<span class="agenda-num">C</span><span>High-level pipeline (draw.io)</span>
-<span class="agenda-num">D</span><span>Landing → Bronze</span>
-<span class="agenda-num">E</span><span>Bronze → Silver</span>
-<span class="agenda-num">F</span><span>Clinical data integration (openEHR / OMOP)</span>
-<span class="agenda-num">G–I</span><span>Gold serving, OMOP workflow, APIs</span>
-<span class="agenda-num">J</span><span>Row-level linking & GDPR cascade</span>
-<span class="agenda-num">K</span><span>Observability, stack, RBAC + ABAC</span>
+*~35 slides · ℹ = information sldie*
 
-</div>
+- Introduction — challenges & medallion architecture
+- Background & design principles
+- Organization — S3 layout & data contract
+- End-to-end pipeline overview
+- Landing → Bronze → Silver
+- Clinical models — openEHR & OMOP
+- Gold serving layer & APIs
+- Identity bridge, linking & GDPR cascade
+- Discovery & observability
+- Infrastructure stack
+- Access control — human & machine roles
+
 
 ---
 class: compact-slide
@@ -42,7 +42,7 @@ class: compact-slide
 - **Healthcare+Bioinformatics background with industry standards** 
     - BSc in Nutritional Sciences -> MSc and Phd in Bioinformatics
     - PhD at University of Luxembourg (genomics research), open-source tooling for large-scale protein function annotation and genomics data integration.
-    - ~4 years in academia, ~4 years in industry - research background, delivery and product-oriented
+    - ~4 years in academia, ~4 years in industry - research background, and delivery and product-oriented
 
 - **Data Governance & Entity Resolution**
     - 8 years building data pipelines
@@ -101,7 +101,7 @@ Validates, aggregates, compresses, and extracts semantic context within a versio
 
 
 ---
-class: slide
+class: slide optional-slide
 ---
 
 # Design principles

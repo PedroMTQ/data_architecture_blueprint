@@ -1,6 +1,6 @@
 # Architecture blueprint slides (Slidev)
 
-Presentation deck distilled from [`../docs/`](../docs/). ~43 slides across medallion layers, diagrams, governance, and APIs.
+Presentation slides for  [`../docs/`](../docs/). ~35 slides across medallion layers, diagrams, governance, and APIs. Uses the [Seriph](https://sli.dev/themes/gallery.html#seriph) theme (`@slidev/theme-seriph`).
 
 ## Local development
 
@@ -56,10 +56,11 @@ Output: `slides/dist/` — deployed with docs to GitHub Pages at:
 | `pages/06-gold.md` | Serving, OMOP, APIs |
 | `pages/07-linking.md` | Entity linking, crypto-shred, cascade |
 | `pages/08-ops.md` | Observability, stack, RBAC/ABAC |
-| `public/diagrams/` | Copies of [`../diagram/`](../diagram/) — run `npm run sync-diagrams` after edits |
 
 ## Diagrams
 
-Export SVGs to [`../docs/assets/diagrams/`](../docs/assets/diagrams/) (gold/OMOP) and/or [`../diagram/`](../diagram/). Then run `npm run sync-diagrams` to copy into `public/diagrams/`.
+Slides reference the same SVGs as MkDocs via a symlink: `pages/diagrams` → `docs/assets/diagrams`. Use `./diagrams/<name>.svg` in slide markdown. Edit diagrams once in `docs/assets/diagrams/` — docs and slides stay in sync.
 
-Large SVGs on a slide: use `{.diagram}` and frontmatter `class: diagram-slide` (see `styles/index.css`). Smaller in-slide diagrams: `{.diagram-sm}`. Tighter cap: add `diagram-sm` on a `diagram-slide` or lower `max-height` in CSS.
+Large SVGs: set frontmatter `class: diagram-slide`. Tighter cap: lower `max-height` in `.slidev-layout.diagram-slide img` in CSS.
+
+Draw.io SVGs use `light-dark()` for OS dark mode; slides force `color-scheme: light` on diagram images so backgrounds stay white regardless of system theme.

@@ -1,10 +1,8 @@
 ---
-theme: default
+theme: seriph
 title: Data Architecture Blueprint
 info: Healthcare research data platform — Bronze, Silver, Gold
 class: text-left
-fonts:
-  sans: Segoe UI, system-ui, sans-serif
 transition: slide-left
 drawings:
   persist: false

@@ -1,10 +1,11 @@
 ---
 layout: default
+class: diagram-slide
 ---
 
 # Bronze → Silver
 
-![Bronze to silver](../public/diagrams/bronze_to_silver.svg)
+![Bronze to silver](./diagrams/bronze_to_silver.svg)
 
 ---
 class: compact-slide
@@ -23,7 +24,8 @@ class: compact-slide
 *Silver pipelines fingerprint is preserved to allow for deterministic replays*
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
+
 ---
 
 # Metadata & semantics
@@ -34,7 +36,8 @@ Per-modality feature extraction (genomics, imaging, documents) → **OpenMetadat
 - Deferred deeper semantics (e.g., AI embeddings for documents deferred to **Gold**)
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
+
 ---
 
 # Silver pipelines (fork by modality)

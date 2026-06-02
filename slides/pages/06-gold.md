@@ -5,10 +5,11 @@ class: diagram-slide
 
 # Gold serving layer
 
-![Silver to gold](../public/diagrams/silver_to_gold_to_serving.svg)
+![Silver to gold](./diagrams/silver_to_gold_to_serving.svg)
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
+
 ---
 
 # Gold objectives
@@ -17,7 +18,7 @@ class: compact-slide
 - Serve **omics & unstructured** (pre-signed URLs for large files)
 - Integrate **researcher** derived data (i.e., analysis) for downstream use cases (AI workflows, sharing with other researchers, etc)
 - Richer **catalogue & semantics** - discoverability, knowledge base
-- **Cross-modal links** between all data assets (varius modalities + derived data)
+- **Cross-modal links** between all data assets (various modalities + derived data)
 
 
 
@@ -28,10 +29,11 @@ class: diagram-slide
 
 # openEHR → OMOP pipeline
 
-![openEHR to OMOP](../public/diagrams/openehr_to_omop.svg)
+![openEHR to OMOP](./diagrams/openehr_to_omop.svg)
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
+
 ---
 
 # Submission API (upload)
@@ -44,7 +46,8 @@ Gateway for **derived / un-supervised** researcher outputs - strict compliance *
 - Exposure per **RBAC/ABAC** - defined by the research group head
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
+
 ---
 
 # Serving API (read)

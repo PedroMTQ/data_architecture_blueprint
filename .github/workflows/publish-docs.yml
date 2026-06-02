@@ -53,10 +53,6 @@ jobs:
         working-directory: slides
         run: npm ci
 
-      - name: Sync diagrams into slides public
-        working-directory: slides
-        run: npm run sync-diagrams
-
       - name: Build slides
         working-directory: slides
         run: npm run build -- --base /${{ github.event.repository.name }}/slides/

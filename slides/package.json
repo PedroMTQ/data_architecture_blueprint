@@ -3,14 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "sync-diagrams": "cp ../docs/assets/diagrams/*.svg public/diagrams/ 2>/dev/null; cp ../diagram/*.svg public/diagrams/ 2>/dev/null; true",
     "dev": "slidev slides.md --open",
     "build": "slidev build slides.md --out dist",
-    "export": "slidev export slides.md --output dist/data_architecture_blueprint.pdf --timeout 120000"
+    "export": "slidev export slides.md --output dist/data_architecture_blueprint.pdf --timeout 120000",
+    "postinstall": "test -L pages/diagrams || ln -sf ../../docs/assets/diagrams pages/diagrams"
   },
   "devDependencies": {
     "@slidev/cli": "^52.0.0",
-    "@slidev/theme-default": "^0.25.0",
     "playwright-chromium": "^1.60.0"
+  },
+  "dependencies": {
+    "@slidev/theme-seriph": "^0.25.0"
   }
 }

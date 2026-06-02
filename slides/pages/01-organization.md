@@ -1,5 +1,5 @@
 ---
-class: compact-slide
+class: compact-slide optional-slide
 ---
 
 # Storage, isolation & organization
@@ -20,7 +20,7 @@ Each layer has its own **append-only PostgreSQL audit ledger**.
 Naming (`_` / `__` / `/`) at **Gold** only.
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
 ---
 
 # Data contract
