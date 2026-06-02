@@ -21,7 +21,7 @@ pip install -r requirements-docs.txt
 mkdocs serve
 ```
 
-Open http://127.0.0.1:8000 — live reload on edits under `docs/`.
+Open http://127.0.0.1:8000 — live reload on edits under `docs/`. Click any diagram to open the lightbox (scroll/pinch to zoom, drag to pan).
 
 ### Source files
 

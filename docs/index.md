@@ -2,6 +2,11 @@
 
 This blueprint describes the data platform architecture across the medallion layers (**Bronze**, **Silver**, **Gold**), covering ingestion, processing, serving, observability, and access control.
 
+![End-to-end medallion pipeline](assets/diagrams/full_pipeline.svg){ width="100%" }
+
+!!! tip "Diagrams"
+    Click any architecture diagram to open the lightbox, then scroll or pinch to zoom and drag to pan.
+
 ## How to read this site
 
 | Section | Topics |

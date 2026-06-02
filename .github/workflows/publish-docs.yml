@@ -5,6 +5,7 @@ on:
     branches: [main, master]
     paths:
       - 'docs/**'
+      - 'diagram/**'
       - 'mkdocs.yml'
       - 'requirements-docs.txt'
       - '.github/workflows/publish-docs.yml'

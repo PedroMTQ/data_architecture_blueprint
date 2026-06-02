@@ -21,6 +21,9 @@ The Bronze Layer is the platform’s secure ingestion gateway boundary. It stric
 4. **Immutable bronze vault:** The validated (demultiplexed) files are written to the final MinIO Bronze Vault. This bucket is locked in **Strict Compliance Mode (WORM)**, meaning the data can never be altered, overwritten, or physically deleted.
 5. **GDPR crypto-shredding & lineage:** To comply with the "Right to Erasure" within a WORM bucket, [MinIO Enterprise server-side KMS](https://docs.min.io/aistor/installation/linux/server-side-encryption/aistor-keymanager/) encrypts every individual file with a unique key (DEK). The file's SHA-256 checksum (for idempotency) is logged in a permanent **PostgreSQL Audit Ledger**. If a patient revokes consent, the platform destroys their specific key, rendering their encrypted files irrecoverable.
 
+![Landing zone to bronze vault](assets/diagrams/landing_to_bronze.svg){ width="100%" }
+
+
 ### Architectural Principles & Multi-Step Ingestion
 
 This architecture assumes **upstream demultiplexing**; i.e., the platform operates on a strict **One Patient, One Object** contract. This ensures files can be securely purged via cryptographic erasure without introducing collateral data loss risks for other cohort participants. Raw data ingestion is isolated per tenant (i.e., one bucket per tenant):
@@ -124,8 +127,3 @@ A payload_metadata could be received from the api gateway payload and supplement
 ***Note: Since we preserve organizational information in the ledger, we can treat each data asset as logically independent, i.e., we only provide per-tenant separation for security reasons, every file within a tenant bucket is simply a pointer that can then be better organised in the gold layer.***
 ***It is also crucial that this audit ledger has some form of disaster recovery (replication, backups, etc) enabled since it is our central control point for orchestration. The audit ledger must be defined to be INSERT only via the GRANT  command.***
 
-### Access Control & cryptographic erasure
-
-* **Ingestion isolation:** Tenants retain write-only privileges to their specific landing perimeter via strict S3 IAM policies; they possess zero direct read permissions over any of the S3 buckets.
-* **Crypto-shredding protocol:** To reconcile Write-Once-Read-Many (WORM) immutability with GDPR's Article 17 ("Right to be Forgotten"), the system leverages native MinIO Enterprise SSE-KMS. DEKs are generated per file in-memory, and the raw payload is encrypted natively by MinIO.
-* **Erasure execution:** To fulfill a GDPR deletion request, an administrative process calls the KMS API to destroy the specific file DEK (e.g., Clinnova’s consent management system). This adds a new event in the ledger with the status: 'CRYPTO_SHRED_COMPLETED'. Purging the key renders the underlying immutable file irrecoverable, achieving legal compliance without breaking the physical storage chain of custody. (Note: This deletion event must subsequently trigger downstream deletions across the Silver and Gold medallion layers).***

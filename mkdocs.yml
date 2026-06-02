@@ -34,6 +34,15 @@ theme:
 
 plugins:
   - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      zoomable: true
+      draggable: true
+      auto_caption: true
+      caption_position: bottom
+      auto_themed: true
 
 markdown_extensions:
   - admonition

@@ -1,0 +1,749 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="Px--xSk2ii70o_0RA-ic">
+    <mxGraphModel dx="4004" dy="1823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-32" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Aggregator" vertex="1">
+          <mxGeometry height="40" width="110" x="470" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-85" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-86" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Demultiplexer" vertex="1">
+          <mxGeometry height="40" width="110" x="540" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-29" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-31" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-16" value="is_small_file">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-49" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-48" value="is_large_file">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-104" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-102" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Ingestion router" vertex="1">
+          <mxGeometry height="50" width="110" x="-154" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-116" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-114" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="bronze audit ledger" vertex="1">
+          <mxGeometry height="40" width="110" x="700" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-76" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-75" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="PUT method" vertex="1">
+          <mxGeometry height="40" width="110" x="17.819999999999993" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-80" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Kafka" vertex="1">
+          <mxGeometry height="40" width="110" x="17.82" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="yields aggregated file" vertex="1">
+          <mxGeometry height="20" width="90" x="610" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;yields demultiplexed file&lt;/div&gt;" vertex="1">
+          <mxGeometry height="41" width="130" x="680" y="1089" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFFFFF,#3399FF);" value="S3 archive zone (cold)" vertex="1">
+          <mxGeometry height="40" width="110" x="540" y="1206.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="archives mulltiplex file" vertex="1">
+          <mxGeometry height="41" width="130" x="610" y="1156.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-78" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Pre-signed URL" vertex="1">
+          <mxGeometry height="40" width="110" x="17.82" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-62" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-65" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-63" connectable="0" parent="GcrMJvRnOmsaSewIOBSj-62" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="is_bad_file" vertex="1">
+          <mxGeometry relative="1" x="0.0074" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-69" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="we append an event with the validation error" vertex="1">
+          <mxGeometry height="30" width="145" x="187.5" y="1252.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-70" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="162.5" width="118.75999999999999" x="337.82" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-61" parent="GcrMJvRnOmsaSewIOBSj-70" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#E51400,#FF3333);" value="S3 quarantine zone" vertex="1">
+          <mxGeometry height="40" width="110" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-64" parent="GcrMJvRnOmsaSewIOBSj-70" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;fillColor=#3B8DF1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;shape=mxgraph.gcp2.arrow_cycle" value="" vertex="1">
+          <mxGeometry height="30" width="31.58" x="87.18" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-68" edge="1" parent="GcrMJvRnOmsaSewIOBSj-70" source="GcrMJvRnOmsaSewIOBSj-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-61" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-65" parent="GcrMJvRnOmsaSewIOBSj-70" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="landing audit ledger" vertex="1">
+          <mxGeometry height="40" width="110" y="122.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="validation can re-occur on a schedule, file can be manually released (admin)" vertex="1">
+          <mxGeometry height="50" width="145" x="190" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-74" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="we store file payload metadata, location, etc" vertex="1">
+          <mxGeometry height="30" width="145" x="-171.5" y="1167.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-82" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-53" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="S3 landing zone" vertex="1">
+          <mxGeometry height="40" width="110" x="180" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="scans for malware, checks for corruption, etc" vertex="1">
+          <mxGeometry height="30" width="145" x="407.5" y="925" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-81" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-83" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-84" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-10" value="is_multiplex">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Pre-validator" vertex="1">
+          <mxGeometry height="40" width="110" x="337.82" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-89" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;All files fulfill the &quot;One object, one patient&quot; contract&lt;/b&gt;" vertex="1">
+          <mxGeometry height="61" width="150" x="1050" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-98" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-209" value="is_duplicate">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-269.9999999999998" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-99" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-94" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Deduplication via sha256 checksum" vertex="1">
+          <mxGeometry height="135" width="130" x="-335" y="917.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-102" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="landing audit ledger" vertex="1">
+          <mxGeometry height="50" width="110" x="-154" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-106" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="420" x="-810" y="915" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-42" edge="1" parent="GcrMJvRnOmsaSewIOBSj-106" source="GcrMJvRnOmsaSewIOBSj-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-6" parent="GcrMJvRnOmsaSewIOBSj-106" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Ingestion gateway" vertex="1">
+          <mxGeometry height="50" width="110" x="140" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-51" connectable="0" parent="GcrMJvRnOmsaSewIOBSj-106" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="130" x="290" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-41" parent="GcrMJvRnOmsaSewIOBSj-51" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="140" width="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-50" connectable="0" parent="GcrMJvRnOmsaSewIOBSj-51" style="group" value="" vertex="1">
+          <mxGeometry height="115" width="110" x="10" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-3" parent="GcrMJvRnOmsaSewIOBSj-50" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Pseudonymization Service" vertex="1">
+          <mxGeometry height="40" width="110" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-39" edge="1" parent="GcrMJvRnOmsaSewIOBSj-50" source="GcrMJvRnOmsaSewIOBSj-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-15" parent="GcrMJvRnOmsaSewIOBSj-50" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Authenticationn" vertex="1">
+          <mxGeometry height="40" width="110" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-226" edge="1" parent="GcrMJvRnOmsaSewIOBSj-106" source="GcrMJvRnOmsaSewIOBSj-225" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-225" parent="GcrMJvRnOmsaSewIOBSj-106" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Data provider/tenant" vertex="1">
+          <mxGeometry height="60" width="30" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-107" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-94" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-109" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;per-tenant landing bucket, e.g., landing_chl, landing_ibbl, landing_lcsb&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45.5" width="210" x="130" y="914.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-118" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-87">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-114" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Encrypting service (KMS)" vertex="1">
+          <mxGeometry height="40" width="110" x="880" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-115" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="150" width="210" x="1020" y="957.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-87" parent="GcrMJvRnOmsaSewIOBSj-115" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#CD7F32;" value="S3 bronze zone (compliance mode, locked, WORM)" vertex="1">
+          <mxGeometry height="55" width="105" x="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-110" parent="GcrMJvRnOmsaSewIOBSj-115" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;per-tenant bronze bucket, e.g., bronze_chl, bronze_ibbl, bronze_lcsb&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;All files are tagged with a patient ID&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="210" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-282" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-202">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-144" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-136">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-173" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-138">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-174" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-139">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-175" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-137">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-133" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Processing fork" vertex="1">
+          <mxGeometry height="40" width="110" x="1385" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-134" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-145" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-143" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-136" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Clinical data" vertex="1">
+          <mxGeometry height="40" width="110" x="1600" y="862.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-178" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-176">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-137" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Omics" vertex="1">
+          <mxGeometry height="40" width="110" x="1600" y="1096.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-179" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-176">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-138" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Text documents" vertex="1">
+          <mxGeometry height="40" width="110" x="1600" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-180" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-176">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-139" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Multimedia" vertex="1">
+          <mxGeometry height="40" width="110" x="1600" y="1206.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-140" parent="1" style="text;whiteSpace=wrap;html=1;" value="triggered by ObjectCreated webhook event" vertex="1">
+          <mxGeometry height="42.5" width="150" x="1370" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-160" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-159" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-143" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Pydantic" vertex="1">
+          <mxGeometry height="40" width="110" x="1780" y="862.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-147" parent="1" style="text;whiteSpace=wrap;html=1;" value="receives payload, transforms to EHRBase API contract, validates, infers, logs metrics" vertex="1">
+          <mxGeometry height="71.5" width="135" x="1780" y="908.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-158" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="375" width="130" x="2110" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-142" parent="GcrMJvRnOmsaSewIOBSj-158" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#C0C0C0,#B3B3B3);" value="EHRBase" vertex="1">
+          <mxGeometry height="40" width="110" x="10" y="332.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-152" edge="1" parent="GcrMJvRnOmsaSewIOBSj-158" source="GcrMJvRnOmsaSewIOBSj-149" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-150" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-149" parent="GcrMJvRnOmsaSewIOBSj-158" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Maps clinical data ingestion system (form) to proper ontology (CKM)" vertex="1">
+          <mxGeometry height="70" width="130" y="112.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-151" edge="1" parent="GcrMJvRnOmsaSewIOBSj-158" source="GcrMJvRnOmsaSewIOBSj-150" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-142" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-150" parent="GcrMJvRnOmsaSewIOBSj-158" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Maps to OpenEHR archetype and template (OpenEHR archetype designer)" vertex="1">
+          <mxGeometry height="70" width="130" y="222.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-155" edge="1" parent="GcrMJvRnOmsaSewIOBSj-158" source="GcrMJvRnOmsaSewIOBSj-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-149" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-154" parent="GcrMJvRnOmsaSewIOBSj-158" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Clinical data modeller" vertex="1">
+          <mxGeometry height="60" width="30" x="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-161" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-142" value="yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-165" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-164" value="no">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-159" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="is EDC valid?" vertex="1">
+          <mxGeometry height="100" width="100" x="1940" y="832.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-171" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-164" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-168" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-164" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Logs in a DLQ (e.g., Kafka) and ledger" vertex="1">
+          <mxGeometry height="50" width="115" x="1932.5" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-168" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="A metrics tracker sends out alerts if DLQ is too large" vertex="1">
+          <mxGeometry height="50" width="115" x="1737.17" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-187" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-176" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-183" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-176" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="&lt;div&gt;Structural validation &amp;amp; identity linkage&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="110" x="1790" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-190" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-181" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-189" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-192" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-181" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-191" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-181" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="File metadata extraction" vertex="1">
+          <mxGeometry height="40" width="110" x="2110" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-185" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-183" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-184" value="no">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-188" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-183" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-181" value="&lt;div&gt;yes&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.0013" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-183" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="is valid?" vertex="1">
+          <mxGeometry height="100" width="100" x="1932.5" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-184" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Silver audit ledger appends error" vertex="1">
+          <mxGeometry height="40" width="110" x="1927.5" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-189" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Silver metadata logged" vertex="1">
+          <mxGeometry height="40" width="110" x="2110" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-195" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-191" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-132" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-191" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Lossless compression" vertex="1">
+          <mxGeometry height="40" width="110" x="2260" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-194" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;b&gt;This is the silver layer for clinical data&lt;/b&gt;" vertex="1">
+          <mxGeometry height="33.75" width="135" x="2117.5" y="915" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-196" parent="1" style="text;whiteSpace=wrap;html=1;" value="We check for file-specific structural issues and ensure the patient_id is valid (through Clinnova MPI)" vertex="1">
+          <mxGeometry height="65.62" width="152.5" x="1780" y="1197.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-283" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-202" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-208" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-322" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-202" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-217">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3080" y="1430" />
+              <mxPoint x="3330" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-352" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-202" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-288">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3080" y="1380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-202" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=22;strokeWidth=2;" value="Serving API" vertex="1">
+          <mxGeometry height="40" width="110" x="3025" y="1225" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-266" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-204" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-205">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-204" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="dbt transformer" vertex="1">
+          <mxGeometry height="40" width="110" x="2810" y="862.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-262" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-205" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-261" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-205" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Staging OMOP CDM" vertex="1">
+          <mxGeometry height="40" width="110" x="3120" y="862.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-208" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFFFFF,#FFD700);strokeColor=#d79b00;" value="&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;S3 gold zone&lt;/span&gt;" vertex="1">
+          <mxGeometry height="55" width="105" x="3280" y="1217.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-209" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#E51400,#FF3333);" value="File is rejected" vertex="1">
+          <mxGeometry height="40" width="110" x="-325" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-324" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-216" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-218" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-326" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-216" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-219">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-216" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="gold metadata logged" vertex="1">
+          <mxGeometry height="40" width="110" x="3515" y="1458.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-217" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="gold audit ledger" vertex="1">
+          <mxGeometry height="40" width="110" x="3275" y="1458.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-325" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-218" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-220" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-218" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="OpenMetadata" vertex="1">
+          <mxGeometry height="40" width="110" x="3740" y="1458.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-327" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-219" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-218">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-219" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="GreatExpectations" vertex="1">
+          <mxGeometry height="40" width="110" x="3620" y="1560" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-220" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="MCP server" vertex="1">
+          <mxGeometry height="40" width="110" x="3940" y="1458.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-319" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-224" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-203">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-224" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Derived data" vertex="1">
+          <mxGeometry height="40" width="110" x="3715" y="1225" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-227" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="The data provider keeps a master copy of the data and submits a&amp;nbsp;&lt;strong&gt;pseudonymized&amp;nbsp;&lt;/strong&gt;&quot;copy&quot;" vertex="1">
+          <mxGeometry height="81" width="140" x="-830" y="1059" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-258" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-230" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-204" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-251" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-230" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-252" parent="1" style="text;whiteSpace=wrap;html=1;" value="new compositions are buffered to PG table omop__stg__tenant_a" vertex="1">
+          <mxGeometry height="63.75" width="150" x="2625" y="923.13" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-257" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="472.5" width="235" x="2800" y="314" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-246" edge="1" parent="GcrMJvRnOmsaSewIOBSj-257" source="GcrMJvRnOmsaSewIOBSj-211" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-243" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-211" parent="GcrMJvRnOmsaSewIOBSj-257" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;container=0;" value="Clinical data modeller" vertex="1">
+          <mxGeometry height="60" width="30" x="50" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-241" edge="1" parent="GcrMJvRnOmsaSewIOBSj-257" source="GcrMJvRnOmsaSewIOBSj-231" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-240" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-231" parent="GcrMJvRnOmsaSewIOBSj-257" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;" value="OMOPHub" vertex="1">
+          <mxGeometry height="40" width="110" x="10" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-235" edge="1" parent="GcrMJvRnOmsaSewIOBSj-257" source="GcrMJvRnOmsaSewIOBSj-233" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-231" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-233" parent="GcrMJvRnOmsaSewIOBSj-257" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;" value="EHRBase" vertex="1">
+          <mxGeometry height="40" width="110" x="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-239" parent="GcrMJvRnOmsaSewIOBSj-257" style="text;whiteSpace=wrap;html=1;container=0;" value="We automatically map OpenEHR to OMOP (delta)" vertex="1">
+          <mxGeometry height="40" width="155" x="80" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-245" edge="1" parent="GcrMJvRnOmsaSewIOBSj-257" source="GcrMJvRnOmsaSewIOBSj-240" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-211" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-240" parent="GcrMJvRnOmsaSewIOBSj-257" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;" value="Staging OpenEHR to OMOP vocabulary" vertex="1">
+          <mxGeometry height="40" width="130" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-243" parent="GcrMJvRnOmsaSewIOBSj-257" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;" value="Validated OpenEHR to OMOP vocabulary" vertex="1">
+          <mxGeometry height="40" width="130" y="432.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-264" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-261" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-263" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-261" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Staging OMOP validation CDM with DataQualityDashboard (DQD, HADES)&amp;nbsp;" vertex="1">
+          <mxGeometry height="81.25" width="150" x="3300" y="841.88" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-279" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-263" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-277" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-263" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="dbt publisher" vertex="1">
+          <mxGeometry height="40" width="110" x="3510" y="862.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-265" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-243" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-204" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-273" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-267" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-268" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-267" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Data engineer/modeller" vertex="1">
+          <mxGeometry height="60" width="30" x="3045" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-276" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-268" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-204">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3060" y="820" />
+              <mxPoint x="2865" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-268" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Creates OpenEHR AQL query to flatten data for OMOP CDM" vertex="1">
+          <mxGeometry height="65" width="140" x="2990" y="733.75" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-313" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-277" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-297">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-277" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFFFFF,#FFD700);strokeColor=#d79b00;" value="&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;OMOP CDM&lt;/span&gt;" vertex="1">
+          <mxGeometry height="55" width="105" x="3690" y="855" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-284" parent="1" style="text;whiteSpace=wrap;html=1;" value="Consumers don&#39;t have access to the silver layer directly, instead we receive requests to the Serving API and aggregate/copy the data to the respective gold zone" vertex="1">
+          <mxGeometry height="111.25" width="160" x="3110" y="1119.38" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-295" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-288" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-202">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2725" y="1245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-292" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;controlled by research group head.&lt;/div&gt;&lt;div&gt;s3://gold_group/cohort/genomics/**&lt;/div&gt;&lt;div&gt;Additional IAM possible&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="3250" y="1282.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-298" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="130" width="135" x="3675" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-297" parent="GcrMJvRnOmsaSewIOBSj-298" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#FFFFFF,#FFD700);strokeColor=#d79b00;align=right;" value="&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(205, 127, 50);&quot;&gt;OMOP serving layer&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="135" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-293" connectable="0" parent="GcrMJvRnOmsaSewIOBSj-298" style="group" value="" vertex="1">
+          <mxGeometry height="90" width="110" x="11.5" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-206" parent="GcrMJvRnOmsaSewIOBSj-293" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="OMOP Athena (vocab store)" vertex="1">
+          <mxGeometry height="40" width="110" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-207" parent="GcrMJvRnOmsaSewIOBSj-293" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="OMOP ATLAS (UI)" vertex="1">
+          <mxGeometry height="40" width="110" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-315" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-303" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-304">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-303" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Clinicians/low code researchers" vertex="1">
+          <mxGeometry height="60" width="30" x="3950" y="888.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-314" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-304" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-297">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-304" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Defines cohorts and requests data (validated/aggregated)" vertex="1">
+          <mxGeometry height="59.5" width="130" x="3900" y="1025.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-308" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-297" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-202">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-318" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-316" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-224">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-316" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Researchers" vertex="1">
+          <mxGeometry height="60" width="30" x="3910" y="1215" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-320" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-203" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-208">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-228" parent="1" style="text;whiteSpace=wrap;html=1;" value="Aggregated analytical data should be anonymized if reasonable. or at least pseudonymized" vertex="1">
+          <mxGeometry height="90" width="140" x="3515" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-321" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-203" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-216">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-323" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-203" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-217">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3570" y="1430" />
+              <mxPoint x="3330" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-203" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Submission API" vertex="1">
+          <mxGeometry height="40" width="110" x="3515" y="1225" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-328" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="318.75" width="110" x="2635" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-230" parent="GcrMJvRnOmsaSewIOBSj-328" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="OpenEHR composition buffer per OMOP CDM" vertex="1">
+          <mxGeometry height="52.5" width="110" y="266.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-255" edge="1" parent="GcrMJvRnOmsaSewIOBSj-328" source="GcrMJvRnOmsaSewIOBSj-253" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-254" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-253" parent="GcrMJvRnOmsaSewIOBSj-328" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" value="Clinical data modeller" vertex="1">
+          <mxGeometry height="60" width="30" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-254" parent="GcrMJvRnOmsaSewIOBSj-328" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="OMOP CDM" vertex="1">
+          <mxGeometry height="52.5" width="110" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-346" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="321.75" width="220" x="2405" y="948.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-199" edge="1" parent="GcrMJvRnOmsaSewIOBSj-346" source="GcrMJvRnOmsaSewIOBSj-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-198" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-132" parent="GcrMJvRnOmsaSewIOBSj-346" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=light-dark(#C0C0C0,#B3B3B3);" value="S3 silver zone (compliance mode, locked, WORM)" vertex="1">
+          <mxGeometry height="55" width="105" x="12.5" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-193" parent="GcrMJvRnOmsaSewIOBSj-346" style="text;whiteSpace=wrap;html=1;" value="&lt;div&gt;per-tenant silver bucket&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;All files are tagged with a patient ID&lt;/div&gt;" vertex="1">
+          <mxGeometry height="63.75" width="210" x="10" y="258" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-198" parent="GcrMJvRnOmsaSewIOBSj-346" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Identity bridge" vertex="1">
+          <mxGeometry height="40" width="110" x="10" y="66.75" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-200" parent="GcrMJvRnOmsaSewIOBSj-346" style="text;whiteSpace=wrap;html=1;" value="we map the uri to the patient ID (for row-level entity linking)" vertex="1">
+          <mxGeometry height="63.75" width="150" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-350" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-347" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-220" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-347" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="&quot;Give me all data modalities for cohort X&quot;" vertex="1">
+          <mxGeometry height="70" width="150" x="3920" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-349" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-348" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-347" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-348" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Researchers" vertex="1">
+          <mxGeometry height="60" width="30" x="3980" y="1740" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-353" parent="1" style="text;whiteSpace=wrap;html=1;" value="Collect all relevant data (pending security checks), stores a log and sends requested data back&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="190" x="2835" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-354" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="147.25" width="130" x="2660" y="1350" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-294" edge="1" parent="GcrMJvRnOmsaSewIOBSj-354" source="GcrMJvRnOmsaSewIOBSj-286" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-288">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-286" parent="GcrMJvRnOmsaSewIOBSj-354" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Researchers" vertex="1">
+          <mxGeometry height="60" width="30" x="50" y="87.25" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-288" parent="GcrMJvRnOmsaSewIOBSj-354" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Requests data (validated/aggregated)" vertex="1">
+          <mxGeometry height="59.5" width="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-256" edge="1" parent="1" source="GcrMJvRnOmsaSewIOBSj-254" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-204" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2690" y="820" />
+              <mxPoint x="2865" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-24" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="500" width="620" x="250" y="2500" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-14" edge="1" parent="AcIvGXYM8tiFghnXml1P-24" source="AcIvGXYM8tiFghnXml1P-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AcIvGXYM8tiFghnXml1P-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-13" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" value="" vertex="1">
+          <mxGeometry height="130" width="490" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-22" edge="1" parent="AcIvGXYM8tiFghnXml1P-24" source="AcIvGXYM8tiFghnXml1P-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AcIvGXYM8tiFghnXml1P-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-2" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" value="Identity bridge" vertex="1">
+          <mxGeometry height="50" width="110" x="190" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-3" parent="AcIvGXYM8tiFghnXml1P-24" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;contains mapping of patient_id to uri&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="145" x="30" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-4" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="EDC" vertex="1">
+          <mxGeometry height="50" width="110" x="10" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-6" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Omics" vertex="1">
+          <mxGeometry height="50" width="110" x="130" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-7" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Documents" vertex="1">
+          <mxGeometry height="50" width="110" x="130" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-8" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Video" vertex="1">
+          <mxGeometry height="50" width="110" x="250" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-9" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="OpenEHR" vertex="1">
+          <mxGeometry height="50" width="110" x="10" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-10" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="OMOP" vertex="1">
+          <mxGeometry height="50" width="110" x="250" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-11" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Derived data" vertex="1">
+          <mxGeometry height="50" width="110" x="366" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-12" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="..." vertex="1">
+          <mxGeometry height="50" width="110" x="366" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-15" parent="AcIvGXYM8tiFghnXml1P-24" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Every file is mapped to the respective patient ID, automatically through processing, Submission API, etc&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="260" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-17" edge="1" parent="AcIvGXYM8tiFghnXml1P-24" source="AcIvGXYM8tiFghnXml1P-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AcIvGXYM8tiFghnXml1P-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-16" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" value="Audit ledger" vertex="1">
+          <mxGeometry height="50" width="110" x="510" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-18" parent="AcIvGXYM8tiFghnXml1P-24" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;the audit ledger is a secondary source of identity linking information and can be used as a validation step&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85" width="145" x="331" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-21" parent="AcIvGXYM8tiFghnXml1P-24" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Data assets identification for cohort analytics, crypto-shredding etc" vertex="1">
+          <mxGeometry height="70" width="167.5" x="161.25" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-23" parent="AcIvGXYM8tiFghnXml1P-24" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(255, 255, 255); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;We don&#39;t explicitly need imperative data lineage, assuming we log all processing, we can infer it through declarative systems&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="140" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="AcIvGXYM8tiFghnXml1P-25" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="240" width="770" x="-642.18" y="2560" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-121" edge="1" parent="AcIvGXYM8tiFghnXml1P-25" source="GcrMJvRnOmsaSewIOBSj-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-119">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-125" edge="1" parent="AcIvGXYM8tiFghnXml1P-25" source="GcrMJvRnOmsaSewIOBSj-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GcrMJvRnOmsaSewIOBSj-124">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-111" parent="AcIvGXYM8tiFghnXml1P-25" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Security officer triggers deletion" vertex="1">
+          <mxGeometry height="50" width="110" x="100" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-123" edge="1" parent="AcIvGXYM8tiFghnXml1P-25" source="GcrMJvRnOmsaSewIOBSj-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-122" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-119" parent="AcIvGXYM8tiFghnXml1P-25" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="&lt;div&gt;KMS API call to delete DEK&lt;/div&gt;(crypto-shredding)" vertex="1">
+          <mxGeometry height="50" width="110" x="285" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-130" edge="1" parent="AcIvGXYM8tiFghnXml1P-25" source="GcrMJvRnOmsaSewIOBSj-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-129">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-122" parent="AcIvGXYM8tiFghnXml1P-25" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Bronze file cannot be decrypted/read" vertex="1">
+          <mxGeometry height="50" width="110" x="453.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-128" edge="1" parent="AcIvGXYM8tiFghnXml1P-25" source="GcrMJvRnOmsaSewIOBSj-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-127" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-124" parent="AcIvGXYM8tiFghnXml1P-25" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="&lt;div&gt;Identity bridge yields S3 uris to delete (bronze, silver, gold)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="127.5" x="287.5" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-126" parent="AcIvGXYM8tiFghnXml1P-25" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;All entries in identity bridge have a patient ID due to the &quot;One object, one patient&quot; contract&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="145" x="280" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-131" edge="1" parent="AcIvGXYM8tiFghnXml1P-25" source="GcrMJvRnOmsaSewIOBSj-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-129">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-127" parent="AcIvGXYM8tiFghnXml1P-25" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Files are soft or hard deleted" vertex="1">
+          <mxGeometry height="50" width="110" x="453.5" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-129" parent="AcIvGXYM8tiFghnXml1P-25" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="New deletion events appended to Audit Ledger" vertex="1">
+          <mxGeometry height="50" width="110" x="660" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-223" edge="1" parent="AcIvGXYM8tiFghnXml1P-25" source="GcrMJvRnOmsaSewIOBSj-221" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GcrMJvRnOmsaSewIOBSj-111" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GcrMJvRnOmsaSewIOBSj-221" parent="AcIvGXYM8tiFghnXml1P-25" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Security officer" vertex="1">
+          <mxGeometry height="60" width="30" y="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

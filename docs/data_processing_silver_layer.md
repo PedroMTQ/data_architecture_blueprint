@@ -21,6 +21,8 @@ To guarantee pipeline integrity, the Silver layer adheres to three strict princi
 * **Metadata catalogue:** Extracted features are indexed in a dedicated metadata catalogue to offload heavy discovery queries from operational systems.
 * **Quarantine & Remediation:** Failed or unlinked files are tagged in the ledger, triggering a retry loop with a maximum TTL.
 
+![Bronze to silver processing](assets/diagrams/bronze_to_silver.svg){ width="100%" }
+
 ### Silver processing forking
 
 At a high level, Silver orchestration is divided into two parallel pipelines based on the incoming data modality:
@@ -182,6 +184,9 @@ Below you can find a non-exhaustive list of industry standards for compression p
 * Standard tabular data (Apache Parquet): Validated, highly structured tabular datasets are serialized into Apache Parquet format. This enforces columnar storage layouts, and is supported by the majority of Data engineering tools.
 
 ##### Identity bridge table
+
+See [Row level entity linking](data_serving_gold_layer.md#row-level-entity-linking) for the full cross-layer view.
+
 
 After processing and storing these files, we also store the link between each file and the respective patient that this data was generated from:
 

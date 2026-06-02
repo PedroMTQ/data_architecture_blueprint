@@ -1,5 +1,16 @@
 
-## Observability, Metrics & Operational Health
+## Observability, metrics & operational health
+
+Row-level entity linking (Identity Bridge, openEHR, OpenMetadata, and GDPR cascade) is documented with a diagram in the [Gold layer — Row level entity linking](data_serving_gold_layer.md#row-level-entity-linking) section.
+
+### Access Control & cryptographic erasure
+
+![Crypto-shredding and DEK erasure](assets/diagrams/crypto_shredding.svg){ width="100%" }
+
+* **Ingestion isolation:** Tenants retain write-only privileges to their specific landing perimeter via strict S3 IAM policies; they possess zero direct read permissions over any of the S3 buckets.
+* **Crypto-shredding protocol:** To reconcile Write-Once-Read-Many (WORM) immutability with GDPR's Article 17 ("Right to be Forgotten"), the system leverages native MinIO Enterprise SSE-KMS. DEKs are generated per file in-memory, and the raw payload is encrypted natively by MinIO.
+* **Erasure execution:** To fulfill a GDPR deletion request, an administrative process calls the KMS API to destroy the specific file DEK (e.g., Clinnova’s consent management system). This adds a new event in the ledger with the status: 'CRYPTO_SHRED_COMPLETED'. Purging the key renders the underlying immutable file irrecoverable, achieving legal compliance without breaking the physical storage chain of custody. (Note: This deletion event must subsequently trigger downstream deletions across the Silver and Gold medallion layers).***
+
 
 ### Pipeline observability (Airflow)
 

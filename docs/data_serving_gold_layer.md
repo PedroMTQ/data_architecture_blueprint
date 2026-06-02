@@ -9,6 +9,8 @@ The Gold Layer is dedicated to **data democratization, semantic discovery,** and
 * Generate deeper semantics and a better catalogue so that we have better discoverability and a more informative knowledge base
 * Export additional links between derived data assets (across all different modalities)
 
+![Silver to gold serving layer](assets/diagrams/silver_to_gold_to_serving.svg){ width="100%" }
+
 ***Note that we also re-use the same Audit ledger mechanism in the gold layer for automated processes (gold audit ledger) which is essentially what backs the retry mechanism.***
 
 ### Clinical data analytics - converting EDC to OMOP
@@ -147,7 +149,7 @@ flowchart TB
 
 By augmenting these technical tracks with rich business and clinical semantics, such as data profile schemas, and analysis summaries, the platform transforms raw flat files into an integrated knowledge base. This data asset is explicitly designed to power downstream automation, making it natively optimized for AI-driven, autonomous (agentic) workflows.
 
-##### Row level entity linking
+#### Row level entity linking
 
 The platform resolves the full clinical chain — patient → visit → sample → biomaterial → omics result → clinical document through a combination of interlocking layers rather than a single registry.
 
@@ -156,5 +158,7 @@ The platform resolves the full clinical chain — patient → visit → sample �
 3. **OpenMetadata as the cross-layer lineage graph:** At the Gold layer, OpenMetadata connects the technical and clinical lineage together into a traversable graph. Every automated pipeline (Airflow DAG, dbt model) exports its lineage automatically. Every researcher-submitted derived file is registered via the Submission API with explicit patient_id links and provenance metadata. A data steward or AI agent can therefore traverse the knowledge graph to answer questions like "which omics files were derived from samples collected at visit V for patient P, and which clinical documents reference the same visit?" without issuing raw database queries, purely through the [MCP interface](https://docs.open-metadata.org/v1.12.x/how-to-guides/mcp/reference#openmetadata-mcp-tools-reference).
 
 
-This cross-layer lineage is also an important feature of this architecture for GDPR compliance. When a patient withdraws consent, the Security & Compliance Officer triggers crypto-shredding on the Bronze DEK. Because the identity bridge table links every downstream Silver and Gold asset back to the same patient_id (regardless of modality) the cascade deletion job can enumerate every affected file (e.g., omics files in Silver, derived datasets in Gold, OMOP records, FHIR resources, and OpenMetadata catalogue entries), and purge or suppress them.
+![Identity bridge linking files to patient_id](assets/diagrams/identity_bridge.svg){ width="100%" }
 
+
+This cross-layer lineage is also an important feature of this architecture for GDPR compliance. When a patient withdraws consent, the Security & Compliance Officer triggers crypto-shredding on the Bronze DEK. Because the identity bridge table links every downstream Silver and Gold asset back to the same patient_id (regardless of modality) the cascade deletion job can enumerate every affected file (e.g., omics files in Silver, derived datasets in Gold, OMOP records, FHIR resources, and OpenMetadata catalogue entries), and purge or suppress them.
