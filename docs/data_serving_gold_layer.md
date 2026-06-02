@@ -1,7 +1,7 @@
 
 ## Data serving & gold layer
 
-The Gold Layer is engineered for **data democratization, semantic discovery,** and **high-throughput computational workflows**. It shifts the architecture from storage-driven into a research serving layer. The gold layer has a several high level objectives:
+The Gold Layer is dedicated to **data democratization, semantic discovery,** and **high-throughput computational workflows**. It shifts the architecture from storage-driven into a research serving layer. The gold layer has a several high level objectives:
 
 * Convert OpenEHR data into OMOP for analytics-driven serving
 * Serve omics and unstructured data
