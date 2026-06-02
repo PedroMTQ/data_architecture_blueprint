@@ -1,0 +1,19 @@
+
+## Observability, Metrics & Operational Health
+
+### Pipeline observability (Airflow)
+
+Airflow is the primary dashboard for pipeline health. Every DAG execution emits structured logs with task-level success/failure states, duration metrics, and retry counts. For production deployments, metrics should be exported to a centralised monitoring stack to enable cross-pipeline visibility and alerting beyond what Airflow's UI provides natively.
+
+### Data quality observability
+
+Data quality is automatically tracked at two distinct points. Great Expectations audits openEHR compositions at the Silver → Gold boundary, surfacing distribution anomalies, missing field rates, and schema drift.
+The OHDSI Data Quality Dashboard (DQD) runs native SQL assertions over completed OMOP schemas, validating cross-table clinical plausibility against international OHDSI conformance standards. Additional data quality metrics could be exposed via e.g., Pydantic EDC validation, and 2+. the gold processing layers.
+
+### Storage observability
+
+MinIO AIStor exposes native S3-compatible metrics via a Prometheus endpoint. These cover bucket-level storage consumption, object count, request throughput, and error rates. Lifecycle policy execution (transitions to warm/cold storage) should be tracked to validate that archival policies are running as expected and that storage costs remain predictable.
+
+### Unified data metrics visibility via OpenMetadata
+
+[OpenMetadata](https://docs.open-metadata.org/v1.12.x/how-to-guides/data-quality-observability/alerts-notifications) provides metrics aggregation and an alerting system; in fact it also offers direct integration of Great Expectations audits and Airflow pipelines. For custom metrics (e.g., DQD), we could e.g., expose metrics to a relational database which can then be served to OpenMetadata.
