@@ -1,5 +1,6 @@
 {
   "recommendations": [
-    "squidfunk.mkdocs-material"
+    "squidfunk.mkdocs-material",
+    "antfu.slidev"
   ]
 }

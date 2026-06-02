@@ -6,6 +6,8 @@
 # Node artifact files
 node_modules/
 dist/
+slides/node_modules/
+slides/dist/
 
 # Compiled Java class files
 *.class
@@ -68,3 +70,4 @@ tests/data/bronze/*
 # MkDocs build output
 site/
 docs/assets/javascripts/mermaid.min.js
+.vscode/

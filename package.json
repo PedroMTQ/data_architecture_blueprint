@@ -1,0 +1,12 @@
+{
+  "name": "data-architecture-blueprint",
+  "private": true,
+  "scripts": {
+    "slides:dev": "npm run dev --prefix slides",
+    "slides:build": "npm run build --prefix slides",
+    "slides:export": "npm run export --prefix slides"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.60.0"
+  }
+}

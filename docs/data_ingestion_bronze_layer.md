@@ -26,7 +26,7 @@ The Bronze Layer is the platform’s secure ingestion gateway boundary. It stric
 
 ### Architectural Principles & Multi-Step Ingestion
 
-This architecture assumes **upstream demultiplexing**; i.e., the platform operates on a strict **One Patient, One Object** contract. This ensures files can be securely purged via cryptographic erasure without introducing collateral data loss risks for other cohort participants. Raw data ingestion is isolated per tenant (i.e., one bucket per tenant):
+This architecture assumes **upstream demultiplexing**; i.e., the platform operates on a strict **One Object, One Patient** contract. This ensures files can be securely purged via cryptographic erasure without introducing collateral data loss risks for other cohort participants. Raw data ingestion is isolated per tenant (i.e., one bucket per tenant):
 
 * **Bronze landing layer**
   * Path: `s3://<tenant_id>/bronze_landing/<uuid>/<raw_filename.ext>`

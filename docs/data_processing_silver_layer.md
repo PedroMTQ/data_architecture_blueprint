@@ -50,7 +50,7 @@ The aim of this process is to convert raw data into OpenEHR archetypes so that t
 #### Advantages of the openEHR two-level approach
 
 * **Long term persistence and zero schema migrations:** The Reference Model provides a stable, universal data structure that never changes based on local clinical workflows.
-* **Granular context preservation**
+* **Granular context preservation** and rich clinical vocabulary
 * **Clinical context and engineering separation:** Software engineers manage the core platform infrastructure (reference model), while clinical experts define the semantics. This clearly divides technical software coding from medical knowledge management (archetypes and templates).
 * **Automated validation:** data payloads are automatically validated against the constraints embedded in the openEHR templates at the API level.
 * **Query portability (AQL):** Archetype Query Language (**AQL**) queries the clinical concept rather than physical database columns.

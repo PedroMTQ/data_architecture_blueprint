@@ -21,6 +21,9 @@ An auditing job is scheduled to audit a sub-set of the OpenEHR data according to
 
 #### OMOP Common Data Model (CDM) & Tooling
 
+![OMOP CDM schema layout in Gold Postgres](assets/diagrams/building_omop_cdm.svg){ width="100%" }
+
+
 While openEHR handles our granular ingestion, the OMOP CDM requires a distinct set of tools optimized for analytics and vocabulary standardization. The OMOP architecture would rely on 3 core pillars:
 
 * **Database tier (OMOP CDM & PostgreSQL):** The OMOP CDM will reside in a dedicated PostgreSQL database within the Gold layer.
@@ -30,6 +33,8 @@ While openEHR handles our granular ingestion, the OMOP CDM requires a distinct s
 ***Note: While EHRBase is OLTP centric, OMOP should be optimized for OLAP, which will require planning the internal tables to optimize for analytical processes (indexing, partitioning, etc), potentially even migrating to an OLAP-centric database engine.***
 
 #### OpenEHR to OMOP pipeline
+
+![openEHR to OMOP pipeline](assets/diagrams/openehr_to_omop.svg){ width="100%" }
 
 1. **Deploy the standard OMOP schema:** Deploy the official OHDSI OMOP CDM tables (e.g., PERSON, MEASUREMENT) into the gold database.
 2. **Define the AQL Command:** Data modellers define a "wide" AQL template to extract all required clinical variables in a flat format.
@@ -74,6 +79,7 @@ This ensures that the format is both human and machine readable (to infer organi
 ***Note: This tokenization framework is used both within the relational (or non relational) databases as well as the S3 object storage.***
 
 #### Relational schemas and tables
+
 
 ##### Global OpenEHR->OMOP vocabulary dictionary
 
@@ -151,11 +157,21 @@ By augmenting these technical tracks with rich business and clinical semantics, 
 
 #### Row level entity linking
 
-The platform resolves the full clinical chain — patient → visit → sample → biomaterial → omics result → clinical document through a combination of interlocking layers rather than a single registry.
+The platform resolves the full clinical chain (patient → visit → sample → biomaterial → omics result → clinical document) by establishing the Identity Bridge as the single operational source of truth, backed by the Audit Ledger as the immutable fallback. Downstream systems act strictly as read-only derivatives of this identity state.
 
-1. **Identity Bridge Table**: The first link is established at ingestion time. Every unstructured, omics, or bioimaging file processed through the Silver pipeline is written to the identity bridge table with its patient_id, s3_uri, modality, and file_type. This means that from the moment a FASTQ file or a DICOM scan lands in Silver, it is already bound to a pseudonymized patient identity resolved via the MPI. Critically, this binding does not require the file to pass through EHRbase. Derived data within the gold layer passes is forced to pass through the Submission API,  forcing it to also be equally anchored via the patient_id in the identity bridge table and therefore linked across all modalities.
-2. **OpenEHR as the clinical context anchor:** for EDC data EHRbase preserves the full clinical hierarchy for structured EDC data. A visit is an EHR Composition, and a sample collection or biomaterial event is modeled as an Action or Observation archetype within that composition, carrying a versioned composition_id. This is the authoritative record of what happened clinically, the visit, the sample draw, the lab request. This data can then be easily joined with the Identity bridge.
-3. **OpenMetadata as the cross-layer lineage graph:** At the Gold layer, OpenMetadata connects the technical and clinical lineage together into a traversable graph. Every automated pipeline (Airflow DAG, dbt model) exports its lineage automatically. Every researcher-submitted derived file is registered via the Submission API with explicit patient_id links and provenance metadata. A data steward or AI agent can therefore traverse the knowledge graph to answer questions like "which omics files were derived from samples collected at visit V for patient P, and which clinical documents reference the same visit?" without issuing raw database queries, purely through the [MCP interface](https://docs.open-metadata.org/v1.12.x/how-to-guides/mcp/reference#openmetadata-mcp-tools-reference).
+1. Primary Source of Truth: Identity Bridge
+The master link is established at ingestion. Every file (unstructured, omics, bioimaging) processed through the Silver pipeline is written to the identity bridge table with its **patient_id**, **s3_uri**, modality, and file_type. From the moment data lands in silver, it is permanently bound to a pseudonymized patient identity resolved via the MPI. Any derived data routed through the Submission API is forced to anchor to this exact same table, ensuring universal modality linkage without requiring complex downstream joins.
+
+2. Immutable Fallback: Bronze Audit Ledger
+If identity drift, split-brain scenarios, or patient merges occur in the upstream MPI, the Bronze Audit Ledger serves as the definitive conflict-resolution mechanism. It maintains the raw, immutable history of patient_id assignments recorded at the absolute point of ingestion. This allows the platform to reconstruct or audit identity states deterministically without relying on the state of downstream applications.
+
+3. Derivative Clinical Context: OpenEHR (EHRbase)
+EHRbase is stripped of identity resolution responsibilities and acts strictly as a downstream consumer of the Bridge. It preserves the clinical hierarchy for structured EDC data (e.g., a visit as an EHR Composition). By ingesting the pre-resolved patient_id directly from the ingestion stream, the clinical record inherently aligns with the Identity Bridge's operational state without requiring a late-stage join.
+
+4. Derivative Governance Graph: OpenMetadata
+OpenMetadata is removed from the operational data path and functions solely as a read-only consumer of the lineage graph. It ingests automated pipeline lineage (Airflow, dbt) and Submission API metadata. This allows data stewards and AI agents to traverse technical and clinical links (via the [MCP interface](https://docs.open-metadata.org/v1.12.x/how-to-guides/mcp/reference#openmetadata-mcp-tools-reference)) to answer complex provenance questions without executing raw database queries, but it is never utilized by operational pipelines to validate runtime identities.
+
+
 
 
 ![Identity bridge linking files to patient_id](assets/diagrams/identity_bridge.svg){ width="100%" }

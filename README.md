@@ -3,8 +3,8 @@
 This blueprint describes a data platform architecture for a healthcare research institute across the medallion layers (Bronze, Silver, Gold), covering ingestion, processing, serving, observability, and access control.
 
 - [Documentation](https://pedromtq.github.io/data_architecture_blueprint/)
-- Slides
-
+- [Slides (HTML)](https://pedromtq.github.io/data_architecture_blueprint/slides/)
+- [Slides (PDF)](https://pedromtq.github.io/data_architecture_blueprint/slides/data_architecture_blueprint.pdf)
 
 ## Documentation site
 
@@ -17,11 +17,21 @@ Browse the full blueprint on **GitHub Pages** (after enabling Pages → **GitHub
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements-docs.txt
+pip install -r requirements.txt
 mkdocs serve
 ```
 
 Open http://127.0.0.1:8000 — live reload on edits under `docs/`. Click any diagram to open the lightbox (scroll/pinch to zoom, drag to pan).
+
+### Slides (Slidev)
+
+```bash
+cd slides && npm install && npm run dev
+```
+
+Or from the repo root: `npm run slides:dev` (after installing dependencies in `slides/`).
+
+Published at **https://pedromtq.github.io/data_architecture_blueprint/slides/** — PDF at [`slides/data_architecture_blueprint.pdf`](https://pedromtq.github.io/data_architecture_blueprint/slides/data_architecture_blueprint.pdf) (built on every push via GitHub Actions). See [`slides/README.md`](slides/README.md).
 
 ### Source files
 

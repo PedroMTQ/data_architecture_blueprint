@@ -1,0 +1,113 @@
+:root {
+  --lih-navy: #1a2744;
+  --lih-blue: #2c5282;
+  --lih-teal: #0d9488;
+  --lih-slate: #475569;
+  --lih-bg: #f8fafc;
+  --lih-border: #e2e8f0;
+}
+
+.slidev-layout {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.slidev-layout h1 {
+  color: var(--lih-navy);
+}
+
+.slidev-layout h2 {
+  color: var(--lih-blue);
+}
+
+.slidev-layout.cover {
+  background: linear-gradient(145deg, var(--lih-navy) 0%, var(--lih-blue) 100%) !important;
+  color: #f8fafc;
+  text-align: center;
+}
+
+.slidev-layout.cover h1,
+.slidev-layout.cover h2 {
+  color: #fff;
+}
+
+.slidev-layout.compact-slide {
+  font-size: 0.88em;
+}
+
+.slidev-layout.compact-slide ul {
+  margin: 0.2em 0;
+}
+
+/* Dense markdown tables (RBAC matrices, etc.) — use: class: compact-slide table-dense */
+.slidev-layout.table-dense h1 {
+  font-size: 1.35em;
+  margin-bottom: 0.35em;
+  line-height: 1.15;
+}
+
+.slidev-layout.table-dense table {
+  width: 100%;
+  font-size: 0.62em;
+  line-height: 1.2;
+  table-layout: fixed;
+}
+
+.slidev-layout.table-dense table th,
+.slidev-layout.table-dense table td {
+  padding: 0.2em 0.35em;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.slidev-layout.compact-slide:not(.table-dense) table {
+  font-size: 0.75em;
+  line-height: 1.25;
+}
+
+.slidev-layout.compact-slide:not(.table-dense) table th,
+.slidev-layout.compact-slide:not(.table-dense) table td {
+  padding: 0.25em 0.45em;
+  vertical-align: top;
+}
+
+.slidev-layout img.diagram,
+.slidev-layout .diagram {
+  max-height: 62vh;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.slidev-layout img.diagram-sm {
+  max-height: 48vh;
+}
+
+/* Title + large SVG (gold pipeline, full pipeline, etc.) */
+.slidev-layout.diagram-slide h1 {
+  font-size: 1.45em;
+  margin-bottom: 0.35em;
+  line-height: 1.2;
+}
+
+.slidev-layout.diagram-slide img.diagram {
+  max-height: calc(100vh - 7rem);
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.agenda-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35em 1.2em;
+  font-size: 0.9em;
+}
+
+.agenda-num {
+  color: var(--lih-teal);
+  font-weight: 700;
+}

@@ -1,7 +1,7 @@
 
 ## Observability, metrics & operational health
 
-Row-level entity linking (Identity Bridge, openEHR, OpenMetadata, and GDPR cascade) is documented with a diagram in the [Gold layer — Row level entity linking](data_serving_gold_layer.md#row-level-entity-linking) section.
+Row-level entity linking (Identity Bridge as operational SoT, Bronze audit ledger fallback, derivative EHRbase/OpenMetadata, and GDPR cascade) is documented in the [Gold layer — Row level entity linking](data_serving_gold_layer.md#row-level-entity-linking) section.
 
 ### Access Control & cryptographic erasure
 

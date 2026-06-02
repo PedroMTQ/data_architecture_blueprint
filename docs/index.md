@@ -7,6 +7,9 @@ This blueprint describes the data platform architecture across the medallion lay
 !!! tip "Diagrams"
     Click any architecture diagram to open the lightbox, then scroll or pinch to zoom and drag to pan.
 
+!!! info "Presentation"
+    Slide deck (Slidev): [HTML on GitHub Pages](https://pedromtq.github.io/data_architecture_blueprint/slides/) · [PDF export](https://pedromtq.github.io/data_architecture_blueprint/slides/data_architecture_blueprint.pdf)
+
 ## How to read this site
 
 | Section | Topics |
