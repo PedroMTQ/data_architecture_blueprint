@@ -1,5 +1,5 @@
-site_name: LIH Data Platform Architecture
-site_description: Conceptual architecture blueprint for the LIH C-DIC data platform (Bronze, Silver, Gold).
+site_name: Data architecture blueprint
+site_description: Conceptual architecture blueprint for a healthcare research institute data platform (Bronze, Silver, Gold).
 site_url: https://pedromtq.github.io/data_architecture_blueprint/
 repo_url: https://github.com/PedroMTQ/data_architecture_blueprint
 repo_name: PedroMTQ/data_architecture_blueprint

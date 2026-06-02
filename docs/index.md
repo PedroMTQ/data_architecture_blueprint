@@ -1,6 +1,6 @@
-# LIH conceptual architecture blueprint
+# Data architecture blueprint
 
-This blueprint describes the LIH data platform architecture across the medallion layers (**Bronze**, **Silver**, **Gold**), covering ingestion, processing, serving, observability, and access control.
+This blueprint describes the data platform architecture across the medallion layers (**Bronze**, **Silver**, **Gold**), covering ingestion, processing, serving, observability, and access control.
 
 ## How to read this site
 
