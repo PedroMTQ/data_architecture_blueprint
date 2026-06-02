@@ -18,9 +18,12 @@ Opens the Slidev dev server with live reload.
 
 ## Export PDF
 
+Requires `playwright-chromium` (listed in `package.json` devDependencies).
+
 ```bash
 cd slides
-npx playwright install chromium   # first time only
+npm install
+npx playwright install chromium   # first time only; use --with-deps on fresh Linux/CI
 npm run export
 ```
 

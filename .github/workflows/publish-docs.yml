@@ -61,16 +61,22 @@ jobs:
         working-directory: slides
         run: npm run build -- --base /${{ github.event.repository.name }}/slides/
 
+      - name: Merge slides HTML into site
+        run: mkdir -p site/slides && cp -r slides/dist/* site/slides/
+
       - name: Install Playwright for PDF export
         working-directory: slides
         run: npx playwright install --with-deps chromium
 
       - name: Export slides PDF
+        id: export-pdf
         working-directory: slides
         run: npm run export
+        continue-on-error: true
 
-      - name: Merge slides into site
-        run: mkdir -p site/slides && cp -r slides/dist/* site/slides/
+      - name: Add PDF to site
+        if: steps.export-pdf.outcome == 'success'
+        run: cp slides/dist/data_architecture_blueprint.pdf site/slides/
 
       - uses: actions/upload-pages-artifact@v3
         with:
