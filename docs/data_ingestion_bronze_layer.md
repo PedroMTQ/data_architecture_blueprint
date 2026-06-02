@@ -58,7 +58,7 @@ To maximize data lake performance and prevent storage metadata bloat, the API ga
 * **Standard payloads ("Normal Data")**: Files ranging from a hundred KBs to a few megabytes (e.g., unstructured clinical PDFs or diagnostic reports) are routed via a HTTP PUT method directly through the gateway into the landing zone.
 * **Massive payloads**: Routing massive binary payloads (e.g., 300GB FASTQ files or video data) through a REST API would result in frequent failures (OOM, disconnections, etc). To resolve this, the gateway uses a S3 Pre-Signed URL pattern. The client requests intent via the API, receives a time-bound URL, and streams the massive file directly to the MinIO landing zone via a multipart upload, bypassing the API compute layer entirely.
 
-Proposed Routing:
+Proposed routing:
 
 ```mermaid
 flowchart TB
@@ -74,6 +74,8 @@ flowchart TB
         direction LR
         OMICS[Large Blobs/Omics] --> GW3[API Gateway] --> Presign[Pre-signed URL] --> LZ3[MinIO Landing Zone]
     end
+    smallStreams ~~~ standardPayload
+    standardPayload ~~~ largeBlobs
 ```
 
 ### Demultiplexing layer

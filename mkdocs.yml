@@ -1,0 +1,75 @@
+site_name: LIH Data Platform Architecture
+site_description: Conceptual architecture blueprint for the LIH C-DIC data platform (Bronze, Silver, Gold).
+site_url: https://pedromtq.github.io/data_architecture_blueprint/
+repo_url: https://github.com/PedroMTQ/data_architecture_blueprint
+repo_name: PedroMTQ/data_architecture_blueprint
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Organization:
+      - S3 hierarchy & strategy: s3_data_lake_hierarchy_organizational_strategy.md
+  - Medallion layers:
+      - Bronze — ingestion: data_ingestion_bronze_layer.md
+      - Silver — processing: data_processing_silver_layer.md
+      - Gold — serving: data_serving_gold_layer.md
+  - Operations:
+      - Observability & metrics: observability_metrics_operational_health.md
+      - Access control: access_control.md
+  - Reference:
+      - Infrastructure stack: tech_stack.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/PedroMTQ/data_architecture_blueprint

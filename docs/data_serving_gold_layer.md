@@ -98,10 +98,14 @@ Similar to our ingestion layer, the serving of files downstream uses a forking d
 Unlike the physical storage abstraction in the bronze and silver layers, the gold layer uses a more flexible custom storage topology. We continue to enforce the same tokenization rules (_ for word spacing, / for namespace boundaries) to organize files within the gold buckets, but we remove strict hierarchical depth limits, allowing researchers to nest project folders as needed.
 Because the Gold Layer aggregates data across multiple tenants for research and analytics, we physically separate buckets by research group boundaries:
 
-* s3://gold_common/ - this bucket contains data assets that must be shared among the research institute, and are generally assumed to be “public” within the institute.
-* s3://gold_my_group/cohort/ - this bucket contains data assets specific to each research group, where the head of the group serves as the access control coordinator, e.g.,
-  * s3://gold_dep_cancer_res/leukemia/genomics
-  * s3://gold_dep_infect_immuno/gut_microrbiome/transcriptomics
+* **Gold common bucket**
+  * Path: `s3://gold_common/<namespace_path>/<filename.ext>`
+  * Storage: Hot Storage / Fine-grained IAM
+  * Institute-wide shared assets; generally treated as "public" within the institute.
+* **Gold research group bucket**
+  * Path: `s3://gold_<research_group>/<cohort>/<modality>/...`
+  * Storage: Hot Storage / Fine-grained IAM (research group coordinator)
+  * Group-specific assets; the group head coordinates access control (e.g., `s3://gold_dep_cancer_res/leukemia/genomics`, `s3://gold_dep_infect_immuno/gut_microrbiome/transcriptomics`).
 
 ***Note: While we isolate data per research group at the bucket level, we also enforce fine-grained IAM (Identity and Access Management) policies within each bucket. This allows us to securely restrict access down to specific folders or prefixes, a standard feature in [enterprise object storage solutions](https://docs.min.io/aistor/administration/iam/access/).***
 
@@ -137,6 +141,7 @@ flowchart TB
         direction LR
         US[Un-supervised Upload] --> SA[Submission API] --> REST[REST Payload] --> OM2[OpenMetadata Knowledge Graph]
     end
+    controlledIngest ~~~ unsupervisedUpload
 ```
 
 

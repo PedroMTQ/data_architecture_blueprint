@@ -62,6 +62,9 @@ tmp/*
 
 tests/data/bronze/*
 
+# Python virtualenv
+.venv/
+
 # MkDocs build output
 site/
 docs/assets/javascripts/mermaid.min.js

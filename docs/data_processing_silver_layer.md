@@ -35,6 +35,7 @@ flowchart TB
         direction LR
         U1[S3 ObjectCreated Event] --> U2[Validation] --> U3[Compression] --> U4[Silver bucket and metadata catalogue]
     end
+    edcPipeline ~~~ omicsPipeline
 ```
 
 #### EDC pipeline
@@ -102,7 +103,10 @@ Because omics, imaging, and multimedia data are heavily bound to underlying rese
 
 Data storage of silver data follows a similar folder structure to the bronze layer:
 
-* **Silver Layer (s3://<tenant_id>/silver/<uuid>/<raw_filename.ext>): Hot-to-Warm Storage / [Governance mode Locked](https://docs.min.io/aistor/administration/object-locking-and-immutability/#minio-object-locking-compliance)**, versioned, recomputable, replayable pipelines. We should include lifecycle policies to avoid storing too many versions of the same file, e.g., older versions of the same file can be moved to a cold storage archive.
+* **Silver layer**
+  * Path: `s3://<tenant_id>/silver/<uuid>/<raw_filename.ext>`
+  * Storage: Hot-to-Warm Storage / [Governance mode Locked](https://docs.min.io/aistor/administration/object-locking-and-immutability/#minio-object-locking-compliance), versioned, recomputable, replayable pipelines
+  * Processed unstructured assets are committed here after validation and compression; lifecycle policies limit retained versions, with older versions moved to cold archive storage.
 
 ##### Structural validation & identity linkage
 
