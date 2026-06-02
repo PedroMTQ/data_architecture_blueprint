@@ -64,21 +64,37 @@ To maximize data lake performance and prevent storage metadata bloat, the API ga
 Proposed routing:
 
 ```mermaid
-flowchart TB
-    subgraph smallStreams [Small Streams / EDC]
-        direction LR
-        SEDC[Small Streams/EDC] --> GW1[API Gateway] --> Kafka[Kafka] --> Agg[Aggregator] --> LZ1[MinIO Landing Zone]
-    end
-    subgraph standardPayload [Standard / Normal]
-        direction LR
-        STD["Standard / Normal"] --> GW2[API Gateway] --> PUT[PUT] --> LZ2[MinIO Landing Zone]
-    end
-    subgraph largeBlobs [Large Blobs / Omics]
-        direction LR
-        OMICS[Large Blobs/Omics] --> GW3[API Gateway] --> Presign[Pre-signed URL] --> LZ3[MinIO Landing Zone]
-    end
-    smallStreams ~~~ standardPayload
-    standardPayload ~~~ largeBlobs
+flowchart LR
+  subgraph sources[" "]
+    direction TB
+    EDC[Small / EDC]
+    STD[Standard PUT]
+    OMICS[Large / Omics]
+  end
+
+  GW[Ingestion Gateway]
+
+  K[Kafka]
+  Agg[Aggregator]
+  PS[Pre-signed URL]
+  LZ[MinIO Landing Zone]
+
+  EDC --> GW
+  STD --> GW
+  OMICS --> GW
+
+  GW -->|EDC| K
+  K --> Agg
+  Agg --> LZ
+
+  GW -->|PUT| LZ
+
+  GW -->|Omics| PS
+  PS --> LZ
+
+  linkStyle 0,3,4,5 stroke:#0d9488,stroke-width:3px
+  linkStyle 1,6 stroke:#2c5282,stroke-width:3px
+  linkStyle 2,7,8 stroke:#cd7f32,stroke-width:3px
 ```
 
 ### Demultiplexing layer

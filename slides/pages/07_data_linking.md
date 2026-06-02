@@ -1,4 +1,12 @@
 ---
+layout: section
+class: section-slide
+transition: fade
+---
+
+# Identity & compliance
+
+---
 class: compact-slide diagram-slide
 ---
 

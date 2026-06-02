@@ -9,37 +9,37 @@ drawings:
 ---
 
 ---
-src: ./pages/00-intro.md
+src: ./pages/00_intro.md
 ---
 
 ---
-src: ./pages/01-organization.md
+src: ./pages/01_organization.md
 ---
 
 ---
-src: ./pages/02-high-level.md
+src: ./pages/02_high_level.md
 ---
 
 ---
-src: ./pages/03-bronze.md
+src: ./pages/03_landing_to_bronze.md
 ---
 
 ---
-src: ./pages/04-silver.md
+src: ./pages/04_bronze_to_silver.md
 ---
 
 ---
-src: ./pages/05-clinical.md
+src: ./pages/05_clinical_data_models.md
 ---
 
 ---
-src: ./pages/06-gold.md
+src: ./pages/06_silver_to_gold.md
 ---
 
 ---
-src: ./pages/07-linking.md
+src: ./pages/07_data_linking.md
 ---
 
 ---
-src: ./pages/08-ops.md
+src: ./pages/08_ops.md
 ---

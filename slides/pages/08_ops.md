@@ -1,5 +1,13 @@
 ---
-class: compact-slide
+layout: section
+class: section-slide
+transition: fade
+---
+
+# Platform & access
+
+---
+class: compact-slide optional-slide
 ---
 
 # Infrastructure stack (1/2)
@@ -88,8 +96,8 @@ layout: cover
 
 Full documentation:
 
-https://pedromtq.github.io/data_architecture_blueprint/
+[Docs](https://pedromtq.github.io/data_architecture_blueprint/)
 
-Slides: https://pedromtq.github.io/data_architecture_blueprint/slides/
+[Slides](https://pedromtq.github.io/data_architecture_blueprint/slides/)
 
-PDF: https://pedromtq.github.io/data_architecture_blueprint/slides/data_architecture_blueprint.pdf
+[PDF](https://pedromtq.github.io/data_architecture_blueprint/slides/data_architecture_blueprint.pdf)

@@ -57,17 +57,17 @@ The aim of this process is to convert raw data into OpenEHR archetypes so that t
 
 ##### Why not OMOP only?
 
-OMOP is optimized for fast analytical queries, meaning it is inherently lossy already during data modelling.
+OMOP is optimized for fast analytical queries, meaning mapping into the CDM is inherently lossy for complex clinical sources.
 
-* **Data flattening:** Forcing complex clinical forms directly into flat OMOP tables strips out critical context. Granular context is exactly the kind of data that modern ML models require for pattern identification.
-* **Rigid ingestion:** OMOP schemas are fixed around standard vocabularies. If a new study introduces non-standard metrics, these cannot be easily and quickly mapped.
+* **Data flattening:** Forcing nested clinical forms directly into flat OMOP tables can drop hierarchy, fine-grained data, and non-standard fields that are preserved in the source.
+* **Concept mapping overhead:** OMOP relies on standard vocabularies. New or trial-specific metrics need concept resolution and CDM design before they are cleanly analytics-ready — not necessarily slower at capture, but more upfront mapping work if OMOP is the only persistence layer.
 
 ##### Why not openEHR only?
 
 While openEHR is the optimal solution for granular storage and long-term persistence, it causes delivery bottlenecks at the serving layer.
 
-* **Analytical overhead:** openEHR structures are deeply nested and hierarchical. Running heavy aggregations or survival analyses natively via AQL introduces computational overhead and requires specialised OpenEHR knowledge.
-* **Data format mismatch:** Data scientists and machine learning tools expect flat tabular dataframes, not complex nested JSON compositions, leading to downstream adhoc data flattening solutions.
+* **Analytical overhead:** openEHR structures are deeply nested and hierarchical. Heavy aggregations or survival analyses via AQL introduce computational overhead and require specialised openEHR knowledge.
+* **Serving mismatch:** Cohort builders and ML tooling expect flat tabular CDMs (e.g. OMOP), not nested compositions — pushing ad-hoc flattening to downstream consumers.
 
 ##### The dual-model synergy
 

@@ -1,6 +1,14 @@
 ---
+layout: section
+class: section-slide
+transition: fade
+---
+
+# Gold serving
+
+---
 layout: default
-class: diagram-slide
+class: diagram-slide  optional-slide
 ---
 
 # Gold serving layer
@@ -8,7 +16,7 @@ class: diagram-slide
 ![Silver to gold](./diagrams/silver_to_gold_to_serving.svg)
 
 ---
-class: compact-slide optional-slide
+class: compact-slide
 
 ---
 

@@ -1,6 +1,14 @@
 ---
+layout: section
+class: section-slide
+transition: fade
+---
+
+# Landing → Bronze
+
+---
 layout: default
-class: diagram-slide
+class: diagram-slide optional-slide
 ---
 
 # Landing → Bronze
@@ -8,16 +16,40 @@ class: diagram-slide
 ![Landing to bronze](./diagrams/landing_to_bronze.svg)
 
 ---
-class: compact-slide optional-slide
+class: compact-slide
 ---
 
 # Payload routing
 
 ```mermaid
 flowchart LR
-  SM[small files - EDC] --> GW[Gateway] --> K[Kafka] --> Agg[Aggregator] --> LZ[Landing zone]
-  STD[Standard PUT] --> GW[Gateway]--> LZ
-  BIG[Omics large] --> GW[Gateway] --> PS[Pre-signed URL] --> LZ
+  EDC[Small / EDC]
+  STD[Standard PUT]
+  OMICS[Large / Omics]
+
+  GW[Ingestion Gateway]
+
+  K[Kafka]
+  Agg[Aggregator]
+  PS[Pre-signed URL]
+  LZ[Landing zone]
+
+  EDC --> GW
+  STD --> GW
+  OMICS --> GW
+
+  GW -->|EDC| K
+  K --> Agg
+  Agg --> LZ
+
+  GW -->|PUT| LZ
+
+  GW -->|Omics| PS
+  PS --> LZ
+
+  linkStyle 0,3,4,5 stroke:#0d9488,stroke-width:3px
+  linkStyle 1,6 stroke:#2c5282,stroke-width:3px
+  linkStyle 2,7,8 stroke:#cd7f32,stroke-width:3px
 ```
 
 ---
@@ -54,6 +86,7 @@ Multiplexed files **must not** enter WORM bronze intact.
 class: compact-slide optional-slide
 ---
 
+
 # Pre-validation (landing)
 
 - Malware scan + file structure checks (generic and file-type specifics)
@@ -63,4 +96,26 @@ class: compact-slide optional-slide
 
 **Once files are established as valid they move to the bronze bucket**
 
+---
+class: compact-slide optional-slide
+---
+
+# Structural validation & compression
+
+*Examples by modality — built incrementally per use case*
+
+**Structural validation (landing / bronze)**
+- **Genomics:** `gzip -t` on `.fastq.gz`; `samtools quickcheck` on BAM/CRAM
+- **Imaging:** DICOM mandatory tags (modality, SOP Class UID) — format compliance, not deep image QA
+- **Documents / tabular:** headerless CSV, unparseable FASTA/FASTQ magic bytes
+- **All modalities:** malware scan; `patient_id` cross-check vs MPI where extractable from headers
+
+**Lossless compression (silver, post-validation)**
+- **FASTQ:** `.fastq.gz` via bgzip (block gzip)
+- **BAM:** bgzip-compressed alignment files
+- **Microscopy / spatial:** OME-TIFF with Deflate or LZW
+- **DICOM (CT/MR/PET):** JPEG 2000 Lossless or JPEG-LS payloads
+- **Tabular:** Apache Parquet after schema validation
+
+Interoperable lossless formats over maximum ratio — biological fidelity preserved.
 

@@ -1,5 +1,13 @@
 ---
-class: compact-slide optional-slide
+layout: section
+class: section-slide
+transition: fade
+---
+
+# Clinical data models
+
+---
+class: compact-slide
 
 ---
 
@@ -16,17 +24,17 @@ class: compact-slide optional-slide
 <div>
 
 OMOP-only:
-- Lossy by definition
-- Flattening strips ML-relevant context
-- Rigid vocabularies lead to slower data collection (OMOP needs to be defined first) → i.e., waterfall
+- Lossy when complex clinical data is mapped to flat CDM tables
+- Hierarchy, and non-standard fields may not survive flattening
+- Standard vocabularies front-load concept mapping before analytics-ready serving
 
 </div>
 
 <div>
 
 openEHR-only:
-- Deep hierarchies → difficult aggregation
-- Analytics expect flat tables
+- Deep hierarchies → heavier aggregation; needs openEHR/AQL expertise
+- Cohort tools and ML stacks expect flat tabular CDMs
 
 </div>
 
