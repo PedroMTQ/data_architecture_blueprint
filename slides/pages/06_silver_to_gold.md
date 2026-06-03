@@ -16,7 +16,7 @@ class: diagram-slide  optional-slide
 ![Silver to gold](./diagrams/silver_to_gold_to_serving.svg)
 
 ---
-class: compact-slid
+class: compact-slide
 
 ---
 
