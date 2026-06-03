@@ -16,7 +16,7 @@ class: diagram-slide optional-slide
 ![Bronze to silver](./diagrams/bronze_to_silver.svg)
 
 ---
-class: compact-slide
+class: slide optional-slide
 ---
 
 # Bronze vs silver file locking and immutability
@@ -30,6 +30,29 @@ class: compact-slide
 | **Bronze** audit ledger (ingest, payload metadata) | **Silver** audit ledger (processing, pipeline fingerprint) |
 
 *Silver pipelines fingerprint is preserved to allow for deterministic replays*
+
+---
+class: slide optional-slide
+---
+
+# Lossless compression
+- **FASTQ:** `.fastq.gz` via bgzip (block gzip)
+- **BAM:** bgzip-compressed alignment files
+- **Microscopy / spatial:** OME-TIFF with Deflate or LZW
+- **DICOM (CT/MR/PET):** JPEG 2000 Lossless or JPEG-LS payloads
+- **Tabular:** Apache Parquet after schema validation
+
+Interoperable lossless formats over maximum ratio - biological fidelity preserved.
+
+# Features extraction
+
+
+Per-modality feature extraction (genomics, imaging, documents) → **OpenMetadata** catalogue
+
+- Extracts superficial semantics: Reference genome, coverage, Q30%, modality, slice thickness, page count, etc
+- Deferred deeper semantics (e.g., AI embeddings for documents deferred to **Gold**)
+
+
 
 ---
 class: compact-slide
@@ -60,8 +83,3 @@ flowchart LR
 
 *OpenEHR archetypes and templates to be defined by data modeller and mapped to data collection system*
 
-
-Per-modality feature extraction (genomics, imaging, documents) → **OpenMetadata** catalogue
-
-- Extracts superficial semantics: Reference genome, coverage, Q30%, modality, slice thickness, page count, etc
-- Deferred deeper semantics (e.g., AI embeddings for documents deferred to **Gold**)

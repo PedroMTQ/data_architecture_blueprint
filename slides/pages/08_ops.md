@@ -1,10 +1,28 @@
 ---
 layout: section
-class: section-slide
+class: section-slide optional-slide
 transition: fade
 ---
 
 # Platform & access
+
+---
+class: compact-slide optional-slide
+---
+
+# Discovery, analytics & observability
+
+- **ATLAS** (OMOP) - cohorts, phenotypes, population-level analytics (ABAC-scoped schemas)
+- **OpenMetadata** (read-only governance graph — not operational identity):
+  - **Catalogue & search** - Silver/Gold assets, schemas, modality metadata (offloads heavy discovery from internal DBs)
+  - **Lineage** - automated from Airflow/dbt; researcher uploads via **Submission API**
+  - **Quality & observability** - GX + pipeline integration, alerts/dashboards; DQD OMOP metrics
+  - **Governance** - business glossary, tags; discovery marketplace (RBAC/ABAC-scoped)
+- **Airflow** - DAGs health
+- **MCP** - stewards & AI agents query the graph (e.g. *omics from visit V for patient P?*) without raw SQL
+- **GX + DQD** hosting (clinical data quality)
+- Ops metrics with Grafana/Superset
+
 
 ---
 class: compact-slide optional-slide
@@ -62,7 +80,7 @@ class: compact-slide optional-slide
 class: compact table-dense optional-slide
 ---
 
-# Human oles
+# Human roles
 
 | Role | Ingress, Landing & Bronze | Silver | Gold (ABAC enforced where noted) | Control Plane |
 | :--- | :--- | :--- | :--- | :--- |
@@ -76,7 +94,7 @@ class: compact table-dense optional-slide
 class: compact table-dense optional-slide
 ---
 
-# Machine Roles
+# Machine roles
 
 | Service(s) | Ingress, Landing & Bronze | Silver | Gold (ABAC enforced where noted) | Control Plane |
 | :--- | :--- | :--- | :--- | :--- |
@@ -94,9 +112,7 @@ layout: cover
 
 # Thank you
 
-Full documentation:
-
-[Docs](https://pedromtq.github.io/data_architecture_blueprint/)
+[Documentation](https://pedromtq.github.io/data_architecture_blueprint/)
 
 [Slides](https://pedromtq.github.io/data_architecture_blueprint/slides/)
 

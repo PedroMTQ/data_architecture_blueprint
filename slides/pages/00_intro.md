@@ -12,7 +12,7 @@ layout: default
 
 # Agenda
 
-*~35 slides · ℹ = information slide*
+*ℹ = information slide*
 
 - Introduction — challenges & medallion architecture
 - Background & design principles
@@ -39,15 +39,16 @@ class: compact-slide optional-slide
     - Orchestration
     - Relational and non-releational storage and data serving
 
+- **Data integration & entity resolution**
+    - 8 years building data pipelines
+    - Deterministic + probabilistic record linkage
+    - Data + processes standardization across multiple modalities and domains
+
 - **Healthcare+Bioinformatics background with industry standards** 
     - BSc in Nutritional Sciences -> MSc and Phd in Bioinformatics
     - PhD at University of Luxembourg (genomics research), open-source tooling for large-scale protein function annotation (data integration of multiple sources).
     - ~4 years in academia, ~4 years in industry - research background, and delivery and product-oriented
 
-- **Data integration & entity resolution**
-    - 8 years building data pipelines
-    - Deterministic + probabilistic record linkage
-    - Data + processes standardization across multiple modalities and domains
 
 
 ---

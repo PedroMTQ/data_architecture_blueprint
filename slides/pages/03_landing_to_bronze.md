@@ -59,21 +59,15 @@ class: compact-slide optional-slide
 ## Ingestion gateway
 
 - Authenticated stateless ingestion gateway
-- Pseudonymization at the boundary for all inbound PII (calls Clinnova's **PSDS**). Outputs secure research **patient_id** for ledger (cross-reference with Clinnova's MPI)
+- Pseudonymization at the boundary for all inbound PII (calls Clinnova's **PSDS**).
 - Routes payload by size and modality
 
 ## Patient ID & identity linkage 
 
 - Master Patient Index (MPI) links all modalities: EDC, unstructured, and omics to one patient identity
 - Data is re-verified during downstream silver processing from file headers (e.g., FASTQ tags)
-- Orphan files → `ORPHAN_PATIENT_ID` in ledger + retry loop (temporal decoupling of upstream MPI patient registration)
 
-
----
-class: compact-slide optional-slide
----
-
-# Demultiplexing
+## Demultiplexing
 
 Multiplexed files **must not** enter WORM bronze intact.
 
@@ -85,7 +79,6 @@ Multiplexed files **must not** enter WORM bronze intact.
 ---
 class: compact-slide optional-slide
 ---
-
 
 # Pre-validation (landing)
 
@@ -109,13 +102,4 @@ class: compact-slide optional-slide
 - **Imaging:** DICOM mandatory tags (modality, SOP Class UID) — format compliance, not deep image QA
 - **Documents / tabular:** headerless CSV, unparseable FASTA/FASTQ magic bytes
 - **All modalities:** malware scan; `patient_id` cross-check vs MPI where extractable from headers
-
-**Lossless compression (silver, post-validation)**
-- **FASTQ:** `.fastq.gz` via bgzip (block gzip)
-- **BAM:** bgzip-compressed alignment files
-- **Microscopy / spatial:** OME-TIFF with Deflate or LZW
-- **DICOM (CT/MR/PET):** JPEG 2000 Lossless or JPEG-LS payloads
-- **Tabular:** Apache Parquet after schema validation
-
-Interoperable lossless formats over maximum ratio — biological fidelity preserved.
 

@@ -8,7 +8,6 @@ transition: fade
 
 ---
 class: compact-slide
-
 ---
 
 # openEHR as clinical source of truth
@@ -18,6 +17,14 @@ class: compact-slide
 - **AQL** queries clinical concepts, not physical columns
 - Automated archetype validation at ingestion
 
+
+
+---
+class: compact-slide
+---
+
+
+# openEHR + OMOP synergy
 
 <div class="grid grid-cols-2 gap-4">
 
@@ -40,9 +47,14 @@ openEHR-only:
 
 </div>
 
-<div class="flex justify-center mt-4">
-  <strong>Dual model: persist in openEHR, serve via OMOP</strong>
-</div>
+# Dual model: persist in openEHR, serve via OMOP
+- **Decouple persistence from analytics** - **EHRbase** (Silver) = clinical source of truth; **OMOP** (Gold) = research serving
+- **Gold per research group:** **AQL** extract → **dbt** → staging OMOP → **DQD** → publish (schemas defined and isolated per group)
+- **Serving:** **Athena** standard vocabularies + **ATLAS** OMOP CDM exploration to define cohorts
+- **Incremental OMOP** - jobs read vetted openEHR, not raw Bronze; build CDMs when a cohort needs them
+
+
+
 
 ---
 class: compact-slide optional-slide
@@ -56,13 +68,3 @@ class: compact-slide optional-slide
 - **OpenEHR Archetype Designer** - low-code templates for trial-specific metrics 
 - **EHRbase** - fully featured production CDR
 
----
-class: compact-slide
----
-
-# openEHR + OMOP synergy
-
-- **Decouple persistence from analytics** - **EHRbase** (Silver) = clinical source of truth; **OMOP** (Gold) = research serving
-- **Gold per research group:** **AQL** extract → **dbt** → staging OMOP → **DQD** → publish (schemas defined and isolated per group)
-- **Serving:** **Athena** standard vocabularies + **ATLAS** OMOP CDM exploration to define cohorts
-- **Incremental OMOP** - jobs read vetted openEHR, not raw Bronze; build CDMs when a cohort needs them

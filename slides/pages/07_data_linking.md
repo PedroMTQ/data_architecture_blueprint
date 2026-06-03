@@ -19,7 +19,7 @@ class: compact-slide diagram-slide
 **Operational source of truth** at Silver ingest — Submission API must anchor derived assets here.
 
 ---
-class: compact-slide
+class: compact-slide optional-slide
 ---
 
 # Row-level entity linking — mechanism
@@ -41,7 +41,7 @@ flowchart LR
 4. **OpenMetadata** — derivative lineage graph (MCP / stewards; not runtime identity validation)
 
 ---
-class: compact-slide diagram-slide
+class: compact-slide diagram-slide optional-slide
 ---
 
 # GDPR erasure & cascade
@@ -52,20 +52,3 @@ class: compact-slide diagram-slide
 - **Cascade** (via **identity bridge** + `patient_id`): Silver S3 · Gold OMOP / FHIR / derived · OpenMetadata catalogue
 - **Derived uploads** must use **Submission API** with `patient_id` - otherwise cascade may miss researcher assets
 
----
-class: compact-slide optional-slide
-
----
-
-# Discovery, analytics & observability
-
-- **ATLAS** (OMOP) - cohorts, phenotypes, population-level analytics (ABAC-scoped schemas)
-- **OpenMetadata** (read-only governance graph — not operational identity):
-  - **Catalogue & search** - Silver/Gold assets, schemas, modality metadata (offloads heavy discovery from internal DBs)
-  - **Lineage** - automated from Airflow/dbt; researcher uploads via **Submission API**
-  - **Quality & observability** - GX + pipeline integration, alerts/dashboards; DQD OMOP metrics
-  - **Governance** - business glossary, tags; discovery marketplace (RBAC/ABAC-scoped)
-- **Airflow** - DAGs health
-- **MCP** - stewards & AI agents query the graph (e.g. *omics from visit V for patient P?*) without raw SQL
-- **GX + DQD** hosting (clinical data quality)
-- Ops metrics with Grafana/Superset
