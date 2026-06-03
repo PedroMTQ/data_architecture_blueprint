@@ -1,25 +1,29 @@
 
 ## Observability, metrics & operational health
 
-Row-level entity linking (Identity Bridge as operational SoT, Bronze audit ledger fallback, derivative EHRbase/OpenMetadata, and GDPR cascade) is documented in the [Gold layer — Row level entity linking](data_serving_gold_layer.md#row-level-entity-linking) section.
+Row-level entity linking (Identity Bridge, audit ledger as fallback) is documented in the [Gold layer — Row level entity linking](data_serving_gold_layer.md#row-level-entity-linking) section.
 
 ### Access Control & cryptographic erasure
 
 ![Crypto-shredding and DEK erasure](assets/diagrams/crypto_shredding.svg){ width="100%" }
 
 * **Ingestion isolation:** Tenants retain write-only privileges to their specific landing perimeter via strict S3 IAM policies; they possess zero direct read permissions over any of the S3 buckets.
-* **Crypto-shredding protocol:** To reconcile Write-Once-Read-Many (WORM) immutability with GDPR's Article 17 ("Right to be Forgotten"), the system leverages native MinIO Enterprise SSE-KMS. DEKs are generated per file in-memory, and the raw payload is encrypted natively by MinIO.
-* **Erasure execution:** To fulfill a GDPR deletion request, an administrative process calls the KMS API to destroy the specific file DEK (e.g., Clinnova’s consent management system). This adds a new event in the ledger with the status: 'CRYPTO_SHRED_COMPLETED'. Purging the key renders the underlying immutable file irrecoverable, achieving legal compliance without breaking the physical storage chain of custody. (Note: This deletion event must subsequently trigger downstream deletions across the Silver and Gold medallion layers).***
+* **Crypto-shredding protocol:** To reconcile Write-Once-Read-Many (WORM) immutability with GDPR's Article 17 ("Right to erasure"), the system leverages native MinIO Enterprise SSE-KMS (server-side encryption). DEKs are generated per file in-memory, and the raw payload is encrypted natively by MinIO.
+* **Erasure execution:** To fulfill a GDPR deletion request, an administrative process calls the KMS API to destroy the specific file DEK. This adds a new event in the ledger with the status: 'CRYPTO_SHRED_COMPLETED'. Purging the key renders the underlying immutable file irrecoverable, achieving legal compliance without breaking the physical storage chain of custody. (Note: This deletion event must subsequently trigger downstream deletions across the Silver and Gold medallion layers).***
 
 
 ### Pipeline observability (Airflow)
 
-Airflow is the primary dashboard for pipeline health. Every DAG execution emits structured logs with task-level success/failure states, duration metrics, and retry counts. For production deployments, metrics should be exported to a centralised monitoring stack to enable cross-pipeline visibility and alerting beyond what Airflow's UI provides natively.
+Airflow is the primary dashboard for pipeline health. Every DAG execution emits structured logs with task-level success/failure states, duration metrics, and retry counts. For production deployments, metrics should be exported to a centralised monitoring stack to enable cross-pipeline visibility and alerting beyond what Airflow's UI provides natively (e.g., using OpenMetadata).
 
 ### Data quality observability
 
-Data quality is automatically tracked at two distinct points. Great Expectations audits openEHR compositions at the Silver → Gold boundary, surfacing distribution anomalies, missing field rates, and schema drift.
-The OHDSI Data Quality Dashboard (DQD) runs native SQL assertions over completed OMOP schemas, validating cross-table clinical plausibility against international OHDSI conformance standards. Additional data quality metrics could be exposed via e.g., Pydantic EDC validation, and 2+. the gold processing layers.
+Data quality is automatically tracked at two distinct points:
+
+- Great Expectations audits openEHR compositions at the Silver → Gold boundary, surfacing distribution anomalies, missing field rates, and schema drift.
+- The OHDSI Data Quality Dashboard (DQD) runs native SQL assertions over completed OMOP schemas, validating cross-table clinical plausibility against international OHDSI conformance standards. 
+
+Additional data quality metrics could be exposed via e.g., Pydantic EDC validation, and the gold processing layers.
 
 ### Storage observability
 

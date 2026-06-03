@@ -1,5 +1,6 @@
 ---
 theme: seriph
+colorSchema: light
 title: Data Architecture Blueprint
 info: Healthcare research data platform — Bronze, Silver, Gold
 class: text-left
