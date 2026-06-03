@@ -63,7 +63,7 @@ class: compact-slide optional-slide
 
 # Tooling: Pydantic, CKM, Archetype Designer
 
-- **Pydantic** - transform to EHRbase contract; fix or reject bad EDC rows
+- **Pydantic** - transform to EHRbase contract; fix or reject bad clinical data
 - **OpenEHR Clinical Knowledge Manager (CKM)** - reuse international archetypes and templates
 - **OpenEHR Archetype Designer** - low-code templates for trial-specific metrics 
 - **EHRbase** - fully featured production CDR

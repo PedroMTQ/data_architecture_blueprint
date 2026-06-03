@@ -16,6 +16,38 @@ class: diagram-slide optional-slide
 ![Bronze to silver](./diagrams/bronze_to_silver.svg)
 
 ---
+class: compact-slide
+
+---
+
+# Silver pipelines (fork by modality)
+
+```mermaid
+flowchart LR
+  O[Bronze ObjectCreated]
+  subgraph EDC [Clinical data / EDC]
+    direction LR
+    subgraph PYD [Pydantic]
+      direction LR
+      P1[Parse] --> P2[Validate] --> P3[Transform]
+    end
+    E4[EHRbase API]
+    P3 --> E4
+  end
+  subgraph UNST [Unstructured, multimedia, omics]
+    direction LR
+    U1[Validate] --> U2[MPI check] --> U3[Metadata extract] --> U4[Compress] --> U5[Silver S3 + catalogue]
+  end
+  O --> P1
+  O --> U1
+```
+
+*OpenEHR archetypes and templates to be defined by data modeller and mapped to data collection system*
+
+<p class="silver-callout">Once files are processed as valid they move to the <strong>silver bucket</strong> or are ingested into the <strong>OpenEHR database</strong></p>
+
+
+---
 class: slide optional-slide
 ---
 
@@ -54,33 +86,3 @@ Per-modality feature extraction (genomics, imaging, documents) → **OpenMetadat
 
 
 
----
-class: compact-slide
-
----
-
-# Silver pipelines (fork by modality)
-
-```mermaid
-flowchart LR
-  O[Bronze ObjectCreated]
-  subgraph EDC [Clinical data / EDC]
-    direction LR
-    subgraph PYD [Pydantic]
-      direction LR
-      P1[Parse] --> P2[Validate] --> P3[Transform]
-    end
-    E4[EHRbase API]
-    P3 --> E4
-  end
-  subgraph UNST [Unstructured, multimedia, omics]
-    direction LR
-    U1[Validate] --> U2[MPI check] --> U3[Metadata extract] --> U4[Compress] --> U5[Silver S3 + catalogue]
-  end
-  O --> P1
-  O --> U1
-```
-
-*OpenEHR archetypes and templates to be defined by data modeller and mapped to data collection system*
-
-<p class="silver-callout">Once files are processed as valid they move to the <strong>silver bucket</strong> or are ingested into the <strong>OpenEHR database</strong></p>
