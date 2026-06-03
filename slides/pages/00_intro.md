@@ -35,7 +35,7 @@ class: compact-slide optional-slide
 
 - **On-Premises data architecture**
     - Vendor-agnostic medallion lakehouse over S3(Hetzner)/MinIO
-    - Big emphasis on creating custom on-prem scalable solutions
+    - Big emphasis on creating custom on-prem solutions
     - Orchestration
     - Relational and non-releational storage and data serving
 
