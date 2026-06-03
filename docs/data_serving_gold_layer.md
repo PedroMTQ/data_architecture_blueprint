@@ -1,11 +1,11 @@
 
 ## Data serving & gold layer
 
-The Gold Layer is dedicated to **data democratization, semantic discovery,** and **high-throughput computational workflows**. It shifts the architecture from storage-driven into a research serving layer. The gold layer has a several high level objectives:
+The Gold Layer is dedicated to **data democratization, semantic discovery,** and **downstream computational workflows and analytics**. It shifts the architecture from storage-driven into a research serving layer. The gold layer has a several high level objectives:
 
 * Convert OpenEHR data into OMOP for analytics-driven serving
 * Serve omics and unstructured data
-* Integrate researchers data in a coherent manner so that it’s available to other downstream users/AI workflows
+* Integrate researchers data (referred to as "derived data") in a coherent manner so that it’s available to other downstream users/AI workflows
 * Generate deeper semantics and a better catalogue so that we have better discoverability and a more informative knowledge base
 * Export additional links between derived data assets (across all different modalities)
 
@@ -17,18 +17,18 @@ The Gold Layer is dedicated to **data democratization, semantic discovery,** and
 
 #### OpenEHR  auditing (Great Expectations)
 
-An auditing job is scheduled to audit a sub-set of the OpenEHR data according to  [Great Expectations](https://greatexpectations.io/) (GX) expectations. These audits would be served into the gold layer and used internally for tracking ECD integration.
+An auditing job is scheduled to audit a sub-set of the OpenEHR data according to  [Great Expectations](https://greatexpectations.io/) (GX) expectations. These audits would be served into the gold layer (and into OpenMetadata) and used internally for tracking ECD integration.
 
 #### OMOP Common Data Model (CDM) & Tooling
 
 ![OMOP CDM schema layout in Gold Postgres](assets/diagrams/building_omop_cdm.svg){ width="100%" }
 
-
 While openEHR handles our granular ingestion, the OMOP CDM requires a distinct set of tools optimized for analytics and vocabulary standardization. The OMOP architecture would rely on 3 core pillars:
 
-* **Database tier (OMOP CDM & PostgreSQL):** The OMOP CDM will reside in a dedicated PostgreSQL database within the Gold layer.
-* **Transformation Engine (dbt):** To populate the OMOP tables we will use [**dbt**](https://www.getdbt.com/product/what-is-dbt) **(Data Build Tool)**.
-* **Vocabulary repository & Analytics Suite (OHDSI Athena & ATLAS):**  We will use the [**Athena**](https://github.com/OHDSI/Athena) repository to download and manage standard medical ontologies. To serve the data to our researchers, we will deploy [**ATLAS**](https://github.com/OHDSI/atlas), an open-source web-based analytics platform that sits on top of the OMOP database. ATLAS allows downstream users to build complex cohorts, define patient phenotypes, and run population-level statistical analyses without writing raw SQL.
+- **Database tier (OMOP CDM):** The OMOP CDM will be hosted in a dedicated database within the Gold layer.
+- **Transformation Engine (dbt):** To populate the OMOP tables we will use [**dbt**](https://www.getdbt.com/product/what-is-dbt) **(Data Build Tool)**.
+- **Vocabulary repository (OHDSI Athena)**:  We will use the [**Athena**](https://github.com/OHDSI/Athena) repository to download and manage standard medical ontologies. 
+- **Analytics suite (OHDSI ATLAS)**: To serve the data to our researchers, we will deploy [**ATLAS**](https://github.com/OHDSI/atlas), an open-source web-based analytics platform that sits on top of the OMOP database. ATLAS allows downstream users to build complex cohorts, define patient phenotypes, and run population-level statistical analyses without writing raw SQL.
 
 ***Note: While EHRBase is OLTP centric, OMOP should be optimized for OLAP, which will require planning the internal tables to optimize for analytical processes (indexing, partitioning, etc), potentially even migrating to an OLAP-centric database engine.***
 
@@ -36,7 +36,7 @@ While openEHR handles our granular ingestion, the OMOP CDM requires a distinct s
 
 ![openEHR to OMOP pipeline](assets/diagrams/openehr_to_omop.svg){ width="100%" }
 
-1. **Deploy the standard OMOP schema:** Deploy the official OHDSI OMOP CDM tables (e.g., PERSON, MEASUREMENT) into the gold database.
+1. **Deploy the standard OMOP schema:** Deploy the OMOP CDM tables (e.g., PERSON, MEASUREMENT) into the gold database.
 2. **Define the AQL Command:** Data modellers define a "wide" AQL template to extract all required clinical variables in a flat format.
 3. **Define the dbt SQL mapping**: Data engineers write the version-controlled dbt models to map the flat AQL output to the standardized OMOP tables (e.g., using OMOPHub for term resolution). Fields that must be masked must be defined here so that dbt can mask them during transformation.
 4. **Detection of new compositions:** A job checks (or we stream them) for any new OpenEHR compositions since the last time it ran, and queries the openEHR REST API using the AQL command for only that batch of composition IDs.
@@ -46,9 +46,9 @@ While openEHR handles our granular ingestion, the OMOP CDM requires a distinct s
 8. **dbt insertion (publish):** If the data validation passes, dbt promotes the data from the staging OMOP CDM into the  final serving OMOP tables. If it fails, we log the failure in the audit ledger with composition IDs for review. The staging OMOP CDM is reset in the next run.
 
 ***Note: For organizational purposes, we would need to organise the Postgres DB into e.g., different schemas per research group. Naming conventions would need to be agreed upon and would depend on the underlying structure of research groups and expected modelling approaches. This schema-per-tenant approach ensures strict logical isolation, simplifies security implementation, and prevents cross-contamination of specialized modeling approaches.***
-***We will follow DBT’s naming conventions, please refer to this [link](https://docs.getdbt.com/best-practices/how-we-style/1-how-we-style-our-dbt-models?version=2.0&name=Fusion).***
+***We could follow DBT’s naming conventions, please refer to this [link](https://docs.getdbt.com/best-practices/how-we-style/1-how-we-style-our-dbt-models?version=2.0&name=Fusion).***
 
-***Note: To handle semantic mapping without introducing external API latency into our data pipeline (step 3), we will use a pre-compiled mapping. For example, we use OMOPHub to resolve terms present in the relevant data model and generate standard vocabulary crosswalks. These crosswalks are loaded into our PostgreSQL database as static reference tables (e.g., via [dbt sources](https://docs.getdbt.com/docs/build/sources?version=2.0&name=Fusion)). We would require a Human-in-the-loop approach to validate these mappings.***
+**Note: To handle semantic mapping without introducing external API latency into our data pipeline (step 3), we will use a pre-compiled mapping approach. For example, we use OMOPHub to resolve terms present in the relevant data model and generate vocabulary crosswalks. These mappings are loaded into our PostgreSQL database as static reference tables (e.g., via [dbt sources](https://docs.getdbt.com/docs/build/sources?version=2.0&name=Fusion)). We would require a Human-in-the-loop approach to validate these mappings.**
 
 #### OMOP data validation & auditing
 
@@ -56,7 +56,7 @@ For data validation and auditing we can run open-source software on our OMOP dat
 
 #### FHIR data serving
 
-Similar to OMOP, we could also provide a FHIR API by leveraging [OpenFHIR](https://open-fhir.com/) to serve clinical data. FHIR would be generated from the EHRBase database and serve as an interoperability/API layer to expose clinical data.
+Similar to OMOP, we could also provide a FHIR API by leveraging [OpenFHIR](https://open-fhir.com/) to serve clinical data. FHIR would be generated from the EHRBase database and serve as an interoperability/API layer to expose clinical data. *This will be considered out of scope for now.*
 
 ### Gold layer organization strategy
 
@@ -66,15 +66,15 @@ In the bronze and silver layer we follow the snake_case convention for name form
 
 #### The Tokenization Rule: _ vs __
 
-##### The Single Underscore (_): Word Spacer
+##### The Single Underscore (_): Word spacer
 
 A single underscore handles basic semantic spacing between words within a single concept block, e.g., my_descriptive_term, tenant_a, source_registry, oncology_project
 
-##### The Double Underscore (__) or slash (/): Namespace Boundary
+##### The Double Underscore (__) or slash (/): Namespace boundary
 
 The double underscore serves to abstract hierarchical boundaries, e.g., omop__core__tenant_a__oncology, which maps to {“omop”: {“tenant_a”: {“oncology”:  …} ...} ...}. For S3 storage we use a slash to define the namespace, e.g., s3://omop/tenant_a/oncology
 
-This ensures that the format is both human and machine readable (to infer organization).
+This ensures that the format is both human and machine readable.
 
 ***Note: This tokenization framework is used both within the relational (or non relational) databases as well as the S3 object storage.***
 
@@ -102,7 +102,7 @@ This ensures that the format is both human and machine readable (to infer organi
 
 #### S3 object storage
 
-Similar to our ingestion layer, the serving of files downstream uses a forking delivery system, i.e., the Serving API gateway.
+Similar to our ingestion layer, the serving of files downstream uses a forking delivery system, i.e., the *Serving API*.
 Unlike the physical storage abstraction in the bronze and silver layers, the gold layer uses a more flexible custom storage topology. We continue to enforce the same tokenization rules (_ for word spacing, / for namespace boundaries) to organize files within the gold buckets, but we remove strict hierarchical depth limits, allowing researchers to nest project folders as needed.
 Because the Gold Layer aggregates data across multiple tenants for research and analytics, we physically separate buckets by research group boundaries:
 
@@ -117,7 +117,7 @@ Because the Gold Layer aggregates data across multiple tenants for research and 
 
 ***Note: While we isolate data per research group at the bucket level, we also enforce fine-grained IAM (Identity and Access Management) policies within each bucket. This allows us to securely restrict access down to specific folders or prefixes, a standard feature in [enterprise object storage solutions](https://docs.min.io/aistor/administration/iam/access/).***
 
-To foster collaboration, any derived data asset produced by a researcher can be uploaded back into the ecosystem using a dedicated **Submission API**. This ensures the data is properly logged, enriched with lineage, and securely exposed to other authorized users within the same research group, or across the institute, depending strictly on defined access policies.
+To foster collaboration, any derived data asset produced by a researcher can be uploaded back into the ecosystem using a dedicated *Submission API*. This ensures the data is properly logged, enriched with lineage, and securely exposed to other authorized users within the same research group, or across the institute, depending strictly on defined IAM policies.
 
 #### Serving API
 
@@ -128,8 +128,8 @@ For model registry and serving we could use MLFlow (industry standard) since it 
 
 This gateway enforces a strict compliance check before data is accepted into the system. Rather than creating friction by requiring the uploader (e.g., a researcher) to manually submit granular provenance and lineage records, the API is designed to do the heavy lifting:
 
-* **Automated data extraction:** The API automatically extracts physical file provenance upon upload. It infers schema definitions, calculates file sizes, and cross-references existing Gold/Silver layer hashes to programmatically infer technical lineage. (potentially leveraging SLURM jobs lineage)
-* **Minimal manual input:** The uploader is only prompted to provide essential semantic business context that a machine cannot infer (e.g., Project ID, clinical study name, or cohort description, patient ID links).
+* **Automated data extraction:** The API automatically extracts physical file provenance upon upload. It infers schema definitions, calculates file sizes, and cross-references existing Gold/Silver layer hashes to programmatically infer technical lineage. (e.g., potentially leveraging SLURM jobs lineage)
+* **Minimal manual input:** The uploader is only prompted to provide essential semantic business context that an automated process cannot infer (e.g., Project ID, clinical study name, or cohort description, patient ID links).
 * **File upload, ledger append & catalogue sync**: If all validation steps pass, the API routes the file to the appropriate gold S3 bucket (e.g., s3://gold_my_group/), appends a success event to the gold audit ledger, and dynamically sends a payload to OpenMetadata.
 
 #### Knowledge base, semantics data lineage, and AI serving
@@ -153,28 +153,25 @@ flowchart TB
 ```
 
 
-By augmenting these technical tracks with rich business and clinical semantics, such as data profile schemas, and analysis summaries, the platform transforms raw flat files into an integrated knowledge base. This data asset is explicitly designed to power downstream automation, making it natively optimized for AI-driven, autonomous (agentic) workflows.
+By augmenting data with rich business and clinical semantics, such as data profile schemas, and analysis summaries, the platform transforms raw flat files into an integrated knowledge base. This data asset is explicitly designed to power downstream automation, making it natively optimized for AI-driven, autonomous (agentic) workflows.
 
 #### Row level entity linking
 
-The platform resolves the full clinical chain (patient → visit → sample → biomaterial → omics result → clinical document) by establishing the Identity Bridge as the single operational source of truth, backed by the Audit Ledger as the immutable fallback. Downstream systems act strictly as read-only derivatives of this identity state.
+The platform resolves the full clinical chain (patient → visit → sample → biomaterial → omics result → clinical document) by establishing the Identity Bridge as the single operational source of truth, backed by the audit ledger as the immutable fallback. Downstream systems act strictly as read-only derivatives of this identity state.
 
 1. Primary Source of Truth: Identity Bridge
-The master link is established at ingestion. Every file (unstructured, omics, bioimaging) processed through the Silver pipeline is written to the identity bridge table with its **patient_id**, **s3_uri**, modality, and file_type. From the moment data lands in silver, it is permanently bound to a pseudonymized patient identity resolved via the MPI. Any derived data routed through the Submission API is forced to anchor to this exact same table, ensuring universal modality linkage without requiring complex downstream joins.
+The master link is established at ingestion. Every file (unstructured, omics, bioimaging) processed through the Silver pipeline is written to the identity bridge table with its **patient_id**, **s3_uri**, modality, and file_type. From the moment data lands in silver, it is permanently bound to a pseudonymized patient ID resolved via the MPI. Any derived data routed through the Submission API is forced to anchor to this exact same table, ensuring universal modality linkage without requiring complex downstream joins.
 
-2. Immutable Fallback: Bronze Audit Ledger
-If identity drift, split-brain scenarios, or patient merges occur in the upstream MPI, the Bronze Audit Ledger serves as the definitive conflict-resolution mechanism. It maintains the raw, immutable history of patient_id assignments recorded at the absolute point of ingestion. This allows the platform to reconstruct or audit identity states deterministically without relying on the state of downstream applications.
+2. Immutable Fallback: Audit Ledger
+If identity drift occurs, the  audit ledger(s) serves as the definitive conflict-resolution mechanism. It maintains the raw, immutable history of patient_id assignments recorded at the absolute point of ingestion and processing.
 
 3. Derivative Clinical Context: OpenEHR (EHRbase)
-EHRbase is stripped of identity resolution responsibilities and acts strictly as a downstream consumer of the Bridge. It preserves the clinical hierarchy for structured EDC data (e.g., a visit as an EHR Composition). By ingesting the pre-resolved patient_id directly from the ingestion stream, the clinical record inherently aligns with the Identity Bridge's operational state without requiring a late-stage join.
+EHRbase is stripped of identity resolution responsibilities and acts strictly as a downstream consumer of the Bridge. It preserves the clinical hierarchy for structured EDC data (e.g., a visit as an EHR Composition). By ingesting the pre-resolved patient_id directly from the ingestion stream, the clinical record inherently aligns with the Identity Bridge's state without requiring a downstream join.
 
 4. Derivative Governance Graph: OpenMetadata
-OpenMetadata is removed from the operational data path and functions solely as a read-only consumer of the lineage graph. It ingests automated pipeline lineage (Airflow, dbt) and Submission API metadata. This allows data stewards and AI agents to traverse technical and clinical links (via the [MCP interface](https://docs.open-metadata.org/v1.12.x/how-to-guides/mcp/reference#openmetadata-mcp-tools-reference)) to answer complex provenance questions without executing raw database queries, but it is never utilized by operational pipelines to validate runtime identities.
-
-
-
+OpenMetadata is removed from the operational data path and functions solely as a read-only consumer of the lineage graph. It ingests automated pipeline lineage (Airflow, dbt) and Submission API metadata. This allows data stewards and AI agents to traverse technical and clinical links (via the [MCP interface](https://docs.open-metadata.org/v1.12.x/how-to-guides/mcp/reference#openmetadata-mcp-tools-reference)) to answer complex provenance questions without executing raw database queries (it is never utilized to validate runtime identities).
 
 ![Identity bridge linking files to patient_id](assets/diagrams/identity_bridge.svg){ width="100%" }
 
 
-This cross-layer lineage is also an important feature of this architecture for GDPR compliance. When a patient withdraws consent, the Security & Compliance Officer triggers crypto-shredding on the Bronze DEK. Because the identity bridge table links every downstream Silver and Gold asset back to the same patient_id (regardless of modality) the cascade deletion job can enumerate every affected file (e.g., omics files in Silver, derived datasets in Gold, OMOP records, FHIR resources, and OpenMetadata catalogue entries), and purge or suppress them.
+This cross-layer lineage is also an important feature of this architecture for GDPR compliance. When a patient withdraws consent, the Security & Compliance Officer triggers crypto-shredding on the files DEK. Because the identity bridge table links every downstream Silver and Gold asset back to the same patient_id (regardless of modality) the cascade deletion job can enumerate every affected file (e.g., omics files in Silver, derived datasets in Gold, OMOP records, FHIR resources, and OpenMetadata catalogue entries), and purge or suppress them.
