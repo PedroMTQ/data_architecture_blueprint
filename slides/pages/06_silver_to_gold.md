@@ -16,19 +16,24 @@ class: diagram-slide  optional-slide
 ![Silver to gold](./diagrams/silver_to_gold_to_serving.svg)
 
 ---
-class: compact-slide
+class: compact-slid
 
 ---
 
 # Gold objectives
 
 - Convert **openEHR → OMOP** for analytics-driven serving
-- Serve **omics & unstructured** (pre-signed URLs for large files)
+- Serve **omics, multimedia, & unstructured data*** — e.g. cohort requests assemble multi-modal assets in Gold and grant researcher access via the API
 - Integrate **researcher** derived data (i.e., analysis) for downstream use cases (AI workflows, sharing with other researchers, etc)
 - Richer **catalogue & semantics** - discoverability, knowledge base
 - **Cross-modal links** between all data assets (various modalities + derived data)
 
 
+
+<p class="gold-callout">After silver processing, <strong>clinical data</strong> is reshaped into analysis-ready gold datasets (OMOP CDMs), and <strong>omics, multimedia, documents, and researcher outputs</strong> are published to gold storage for discovery and reuse</p>
+
+
+<p class="slide-footnote">* Serving API for standard requests; pre-signed URLs for large files</p>
 
 ---
 layout: default

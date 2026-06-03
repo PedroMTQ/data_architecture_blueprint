@@ -80,26 +80,23 @@ Multiplexed files **must not** enter WORM bronze intact.
 class: compact-slide optional-slide
 ---
 
-# Pre-validation (landing)
+# Pre-validation
 
-- Malware scan + file structure checks (generic and file-type specifics)
+- Data pre-validation 
 - Failures → **logical quarantine** in audit ledger (`VALIDATION_FAILED`)
 - Airflow sensor retries with TTL - no physical move required
 - Clean files → per-file **DEK** → immutable **bronze** bucket (encrypted and WORM)
 
-**Once files are established as valid they move to the bronze bucket**
 
----
-class: compact-slide optional-slide
----
-
-# Structural validation & compression
-
-*Examples by modality — built incrementally per use case*
-
-**Structural validation (landing / bronze)**
+#### Pre-validation examples
 - **Genomics:** `gzip -t` on `.fastq.gz`; `samtools quickcheck` on BAM/CRAM
 - **Imaging:** DICOM mandatory tags (modality, SOP Class UID) — format compliance, not deep image QA
 - **Documents / tabular:** headerless CSV, unparseable FASTA/FASTQ magic bytes
-- **All modalities:** malware scan; `patient_id` cross-check vs MPI where extractable from headers
+- **All modalities:** 
+  - malware scan
+  - cross-check patient identity (ie.., `patient_id` in MPI) 
 
+*Examples by modality - built incrementally*
+
+
+<p class="bronze-callout">Once files are established as valid they move to the <strong>bronze bucket</strong></p>

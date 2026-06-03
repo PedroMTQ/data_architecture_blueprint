@@ -83,3 +83,4 @@ flowchart LR
 
 *OpenEHR archetypes and templates to be defined by data modeller and mapped to data collection system*
 
+<p class="silver-callout">Once files are processed as valid they move to the <strong>silver bucket</strong> or are ingested into the <strong>OpenEHR database</strong></p>
