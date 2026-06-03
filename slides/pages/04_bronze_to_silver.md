@@ -64,7 +64,7 @@ class: compact-slide
 ```mermaid
 flowchart LR
   O[Bronze ObjectCreated]
-  subgraph EDC [Clinical data / EDC → openEHR]
+  subgraph EDC [Clinical data / EDC]
     direction LR
     subgraph PYD [Pydantic]
       direction LR
@@ -73,7 +73,7 @@ flowchart LR
     E4[EHRbase API]
     P3 --> E4
   end
-  subgraph UNST [Unstructured / omics]
+  subgraph UNST [Unstructured, multimedia, omics]
     direction LR
     U1[Validate] --> U2[MPI check] --> U3[Metadata extract] --> U4[Compress] --> U5[Silver S3 + catalogue]
   end

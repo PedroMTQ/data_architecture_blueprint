@@ -58,13 +58,13 @@ class: compact-slide optional-slide
 
 ## Ingestion gateway
 
-- Authenticated stateless ingestion gateway
-- Pseudonymization at the boundary for all inbound PII (calls Clinnova's **PSDS**).
+- **Authenticated** stateless ingestion gateway
+- **Pseudonymization** at the boundary for all inbound PII (calls Clinnova's **PSDS**).
 - Routes payload by size and modality
 
 ## Patient ID & identity linkage 
 
-- Master Patient Index (MPI) links all modalities: EDC, unstructured, and omics to one patient identity
+- Master Patient Index (MPI) **links all modalities**: EDC, unstructured, and omics to one patient identity
 - Data is re-verified during downstream silver processing from file headers (e.g., FASTQ tags)
 
 ## Demultiplexing
@@ -83,16 +83,16 @@ class: compact-slide optional-slide
 # Pre-validation
 
 - Data pre-validation 
-- Failures → **logical quarantine** in audit ledger (`VALIDATION_FAILED`)
+- Failures → logical quarantine in audit ledger (`VALIDATION_FAILED`)
 - Airflow sensor retries with TTL - no physical move required
-- Clean files → per-file **DEK** → immutable **bronze** bucket (encrypted and WORM)
+- Clean files → **per-file DEK** → immutable **bronze** bucket (encrypted and WORM)
 
 
 #### Pre-validation examples
-- **Genomics:** `gzip -t` on `.fastq.gz`; `samtools quickcheck` on BAM/CRAM
-- **Imaging:** DICOM mandatory tags (modality, SOP Class UID) — format compliance, not deep image QA
-- **Documents / tabular:** headerless CSV, unparseable FASTA/FASTQ magic bytes
-- **All modalities:** 
+- Genomics: `gzip -t` on `.fastq.gz`; `samtools quickcheck` on BAM/CRAM
+- Imaging: DICOM mandatory tags (modality, SOP Class UID) — format compliance, not deep image QA
+- Documents / tabular: headerless CSV, unparseable FASTA/FASTQ magic bytes
+- All modalities:
   - malware scan
   - cross-check patient identity (ie.., `patient_id` in MPI) 
 

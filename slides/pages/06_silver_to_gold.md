@@ -16,15 +16,15 @@ class: diagram-slide  optional-slide
 ![Silver to gold](./diagrams/silver_to_gold_to_serving.svg)
 
 ---
-class: compact-slide
+class: compact
 
 ---
-
+ 
 # Gold objectives
 
 - Convert **openEHR → OMOP** for analytics-driven serving
-- Serve **omics, multimedia, & unstructured data*** — e.g. cohort requests assemble multi-modal assets in Gold and grant researcher access via the API
-- Integrate **researcher** derived data (i.e., analysis) for downstream use cases (AI workflows, sharing with other researchers, etc)
+- Serve **omics, multimedia, & unstructured data*** — e.g. researcher requests list of data assets,  assembled and stored in gold, grant researcher access via the Serving API
+- Integrate **researcher** derived data (i.e., analysis) for downstream use cases (e.g., AI workflows, and sharing with other researchers)
 - Richer **catalogue & semantics** - discoverability, knowledge base
 - **Cross-modal links** between all data assets (various modalities + derived data)
 
@@ -45,7 +45,7 @@ class: diagram-slide
 ![openEHR to OMOP](./diagrams/openehr_to_omop.svg)
 
 ---
-class: compact-slide optional-slide
+class: optional-slide
 
 ---
 
@@ -59,7 +59,7 @@ Gateway for **derived / un-supervised** researcher outputs - strict compliance *
 - Exposure per **RBAC/ABAC** - defined by the research group head
 
 ---
-class: compact-slide optional-slide
+class: optional-slide
 
 ---
 

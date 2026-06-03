@@ -29,19 +29,19 @@ class: compact-slide
 <div class="grid grid-cols-2 gap-4">
 
 <div>
+openEHR-only:
 
-OMOP-only:
-- Lossy when complex clinical data is mapped to flat CDM tables
-- Hierarchy, and non-standard fields may not survive flattening
-- Standard vocabularies front-load concept mapping before analytics-ready serving
+- Deep hierarchies → heavier aggregation; needs openEHR/AQL expertise
+- Cohort tools and ML stacks expect flat tabular CDMs
 
 </div>
 
 <div>
+OMOP-only:
 
-openEHR-only:
-- Deep hierarchies → heavier aggregation; needs openEHR/AQL expertise
-- Cohort tools and ML stacks expect flat tabular CDMs
+- Lossy when complex clinical data is mapped to flat CDM tables
+- Hierarchy, and non-standard fields may not survive flattening
+- Standard vocabularies front-load concept mapping before analytics-ready serving
 
 </div>
 

@@ -21,7 +21,7 @@ class: compact-slide optional-slide
 - **Airflow** - DAGs health
 - **MCP** - stewards & AI agents query the graph (e.g. *omics from visit V for patient P?*) without raw SQL
 - **GX + DQD** hosting (clinical data quality)
-- Ops metrics with Grafana/Superset
+- Operational metrics with Grafana/Superset
 
 
 ---
